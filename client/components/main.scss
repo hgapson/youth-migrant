@@ -1,0 +1,323 @@
+@import url('https://fonts.googleapis.com/css2?family=Clicker+Script&family=Poppins:wght@200;300;500;600;700&display=swap');
+
+:root {
+  --bg-black-900: #f2f2fc;
+  --bg-black-100: #fdf9ff;
+  --bg-black-50: #e8dfec;
+  --skin-color: #ec1818;
+  --text-black-900: #302e4d;
+  --text-black-700: #504e70;
+  --big-black-950: #172554;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif; /* Fixed typo from 'puppin' */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Ensure it's above other content */
+  background-color: #1e3a8a; /* Match the header background color */
+  transition: transform 0.3s ease; /* Smooth transition for hide/show */
+}
+
+.header.hide {
+  transform: translateY(-100%); /* Move header up to hide it */
+}
+
+.header.show {
+  transform: translateY(0); /* Move header back into view */
+}
+
+.section {
+  background: var(--bg-black-900);
+  min-height: 100vh;
+  display: block;
+  padding: 9px 30px; /* Fixed typo from 9 to 9px */
+  opacity: 1;
+}
+
+.main-content {
+  padding-left: 0; /* Fixed typo from 00px to 0 */
+  background: var(--big-black-950);
+}
+
+.padd-15 {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.container {
+  max-width: 1100px;
+  width: 100%;
+  margin: auto;
+  padding: 0 15px;
+}
+
+.section .container {
+  padding: 60px;
+  padding-bottom: 70px;
+}
+
+.section-title {
+  flex: 0 0 100%;
+  max-width: 100%;
+  margin-bottom: 60px;
+}
+
+.section-title h2 {
+  font-size: 40px;
+  color: var(--text-black-900);
+  font-weight: 700;
+  position: relative;
+}
+
+.section-title h2::before,
+.section-title h2::after {
+  content: '';
+  height: 4px;
+  background-color: var(--skin-color);
+  position: absolute;
+  top: 100%;
+}
+
+.section-title h2::before {
+  width: 50px;
+  left: 0;
+}
+
+.section-title h2::after {
+  width: 25px;
+  left: 0;
+  margin-top: 8px;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+  position: relative;
+}
+
+.btn {
+  font-size: 16px;
+  font-weight: 500;
+  padding: 12px 35px;
+  color: white;
+  border-radius: 40px;
+  border: none;
+  display: inline-block;
+  white-space: nowrap;
+  background: var(--skin-color);
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+.shadow-dark {
+  box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
+}
+
+.home {
+  min-height: 100vh;
+  display: flex;
+  color: var(--text-black-900);
+}
+
+.home .home-info {
+  flex: 0 0 60%;
+  max-width: 60%;
+}
+
+h3.hello {
+  font-size: 28px;
+  margin: 15px 0;
+}
+
+h3.hello span {
+  font-family: 'Clicker Script', cursive;
+}
+
+h3.my-profession {
+  font-size: 30px;
+  margin: 15px 0;
+}
+
+.typing {
+  color: var(--skin-color);
+}
+
+.home-info p {
+  margin-bottom: 70px;
+  font-size: 20px;
+  color: var(--text-black-700);
+}
+
+.home .home-info {
+  flex: 1; /* Takes remaining space */
+  margin-top: 20px; /* Adjust the spacing as needed */
+}
+
+.home .home-image {
+  flex: 0 0 auto; /* Only take the necessary width for the image */
+  text-align: center;
+  position: relative;
+}
+
+.home .home-image img {
+  width: 100%; /* Ensure the image takes the full width of its container */
+  max-width: 550px; /* Maximum width for responsiveness */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 50% 50% 40% 40%; /* Creates the egg shape */
+  object-fit: cover; /* Ensures the image covers the entire shape */
+}
+
+.event-thumbnail {
+  // Styles for event thumbnail
+  // ...
+
+  &.current-event {
+    width: 180px; /* Example larger width */
+    height: 180px; /* Example larger height */
+  }
+}
+
+.parallelogram-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.parallelogram {
+  transform: skew(-20deg);
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.testimonial-message {
+  position: relative;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.footer {
+  background-color: #ebf8ff;
+  padding: 1.5rem;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    @media (min-width: 768px) {
+      flex-direction: row;
+    }
+  }
+
+  .grid {
+    margin-top: 2rem;
+    gap: 2rem;
+    @media (min-width: 768px) {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+    }
+  }
+
+  h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+
+  h3 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    cursor: pointer;
+    @media (min-width: 768px) {
+      cursor: default;
+    }
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    display: none;
+    @media (min-width: 768px) {
+      display: block;
+    }
+
+    &.block {
+      display: block;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+      position: relative;
+      padding-left: 1.5rem;
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0.5rem;
+        width: 0.5rem;
+        height: 0.5rem;
+        border-radius: 50%;
+        background: #000;
+      }
+
+      a {
+        text-decoration: underline;
+        color: #000;
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  .flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .cursor-pointer {
+    cursor: pointer;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .block {
+    display: block;
+  }
+}
+
+
+
