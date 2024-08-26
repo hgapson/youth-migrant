@@ -24,12 +24,12 @@ function NavLinks() {
   }, [])
 
   return (
-    <nav className="relative flex items-center">
+    <nav className="relative flex items-center ">
       {/* Toggle Button for Mobile */}
       {!isDesktop && (
         <button
           onClick={toggleMenu}
-          className="mr-4 text-white focus:outline-none md:hidden"
+          className="mr-4 text-black focus:outline-none md:hidden"
         >
           <svg
             className="h-6 w-6"
@@ -50,12 +50,12 @@ function NavLinks() {
 
       {/* Mobile Menu */}
       {!isDesktop && isMenuOpen && (
-        <div className="absolute right-0 top-12 z-50 w-48 rounded-lg bg-blue-950 shadow-lg">
+        <div className="absolute right-0 top-12 z-50 w-48 rounded-lg bg-sky-300  shadow-lg">
           <ul className="flex flex-col items-start space-y-2 px-2 py-4 text-sm">
             <li>
               <Link
                 to="/"
-                className="font-semibold text-white hover:text-blue-500"
+                className="font-semibold text-black hover:text-blue-500"
                 onClick={toggleMenu}
               >
                 Home
@@ -64,7 +64,7 @@ function NavLinks() {
             <li>
               <Link
                 to="/about-us"
-                className="font-semibold text-white hover:text-blue-500"
+                className="font-semibold text-black hover:text-blue-500"
                 onClick={toggleMenu}
               >
                 About Us
@@ -73,34 +73,17 @@ function NavLinks() {
             <li>
               <Link
                 to="/our-programs"
-                className="font-semibold text-white hover:text-blue-500"
+                className="font-semibold text-black hover:text-blue-500"
                 onClick={toggleMenu}
               >
                 Our Programs
               </Link>
             </li>
-            <li>
-              <Link
-                to="/our-partners"
-                className="font-semibold text-white hover:text-blue-500"
-                onClick={toggleMenu}
-              >
-                Our Partners
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/get-involved"
-                className="font-semibold text-white hover:text-blue-500"
-                onClick={toggleMenu}
-              >
-                Get Involved
-              </Link>
-            </li>
+
             <li>
               <Link
                 to="/contact"
-                className="font-semibold text-white hover:text-blue-500"
+                className="font-semibold text-black hover:text-blue-500"
                 onClick={toggleMenu}
               >
                 Contact Us
@@ -113,36 +96,25 @@ function NavLinks() {
       {/* Desktop Menu */}
       {isDesktop && (
         <div className="ml-auto flex space-x-6 text-base">
-          <Link to="/" className="font-semibold text-white hover:text-blue-500">
+          <Link to="/" className="font-semibold text-black hover:text-blue-500">
             Home
           </Link>
           <Link
             to="/about-us"
-            className="font-semibold text-white hover:text-blue-500"
+            className="font-semibold text-black hover:text-blue-500"
           >
             About
           </Link>
           <Link
             to="/our-programs"
-            className="font-semibold text-white hover:text-blue-500"
+            className="font-semibold text-black hover:text-blue-500"
           >
             Programs
           </Link>
-          <Link
-            to="/our-partners"
-            className="font-semibold text-white hover:text-blue-500"
-          >
-            Partners
-          </Link>
-          <Link
-            to="/get-involved"
-            className="font-semibold text-white hover:text-blue-500"
-          >
-            Get Involved
-          </Link>
+
           <Link
             to="/contact"
-            className="font-semibold text-white hover:text-blue-500"
+            className="font-semibold text-black hover:text-blue-500"
           >
             Contact
           </Link>

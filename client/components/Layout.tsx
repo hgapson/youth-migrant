@@ -10,7 +10,7 @@ import useScrollToTop from './UseScrollToTop'
 const Layout = () => {
   useScrollToTop() // making page start from top
   return (
-    <div className="flex min-h-screen flex-col">
+    <div className="flex min-h-screen flex-col ">
       <Header />
       <main className="flex-grow pb-16 pt-16">
         {' '}

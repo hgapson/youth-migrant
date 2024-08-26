@@ -1,9 +1,7 @@
-// src/components/HomePage/Header.tsx
-
 import React, { useEffect, useState } from 'react'
-import NavLinks from './Navbar' // Adjust the path as needed
-import Logo from './Logo' // Adjust the path as needed
-import '../main.scss' // Ensure this path is correct
+import NavLinks from './Navbar'
+import Logo from './Logo'
+import '../main.scss'
 
 function Header() {
   const [showHeader, setShowHeader] = useState(true)
@@ -30,13 +28,11 @@ function Header() {
 
   return (
     <header
-      className={`header ${showHeader ? 'show' : 'hide'} bg-blue-950 p-2 shadow-md`}
+      className={`header ${showHeader ? 'show' : 'hide'} bg-sky-300  p-2 shadow-md`}
     >
       <div className="container mx-auto flex flex-col items-center justify-between md:flex-row">
-        {/* Logo */}
         <Logo />
 
-        {/* Navigation Links */}
         <NavLinks />
       </div>
     </header>

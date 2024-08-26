@@ -54,12 +54,11 @@ const Footer = () => {
           <div className="mb-4 flex flex-1 flex-col rounded-lg bg-yellow-100 p-4 lg:mb-0 lg:p-6">
             <div className="flex-1">
               <h1 className="font-times mb-4 text-lg md:text-xl lg:text-2xl">
-                WAIKATO REFUGEE FORUM
+                YOUTH MIGRANT
               </h1>
               <p className="text-base md:text-lg">
-                Waikato Refugee Forum partners with refugees to access
-                life-changing solutions and transforms how the world supports
-                them.
+                Youth Migrant partners with refugees to access life-changing
+                solutions and transforms how the world supports them.
               </p>
             </div>
             <div className="mt-4 flex flex-col gap-4 text-white lg:flex-row lg:gap-6">
