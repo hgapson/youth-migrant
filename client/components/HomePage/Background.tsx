@@ -10,7 +10,7 @@ const Background: React.FC = () => {
     Aos.init({ duration: 2000 })
   }, [])
   return (
-    <div className="mt-16 min-h-screen bg-gray-100">
+    <div className="mt-16  bg-gray-100">
       <section
         className="h-96 bg-cover bg-center"
         style={{ backgroundImage: `url(${cover})` }}
