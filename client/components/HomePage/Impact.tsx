@@ -3,7 +3,7 @@ import impact from '../public/impact.jpg'
 
 const FancySection: React.FC = () => {
   return (
-    <section className="bg-gradient-to-r from-blue-500 to-purple-600 py-16">
+    <section className="bg-cyan-600 py-16">
       <div className="container mx-auto px-6 lg:px-8">
         <h2 className="mb-8 text-center text-4xl font-extrabold text-white drop-shadow-lg">
           Our Impact
@@ -18,7 +18,9 @@ const FancySection: React.FC = () => {
               className="h-80 w-full object-cover"
             />
             <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-30 opacity-0 transition-opacity duration-500 hover:opacity-100">
-              <span className="text-xl font-bold text-white"></span>
+              <span className="text-xl font-bold text-white">
+                Click the button for more information
+              </span>
             </div>
           </div>
 

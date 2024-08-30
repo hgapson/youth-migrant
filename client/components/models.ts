@@ -1,6 +1,6 @@
-import wrd from './public/wrd.jpg'
-import volunteering from './public/volunteering.jpg'
-import workshop from './public/workshop.jpg'
+import event from './public/event-home.jpg'
+// import volunteering from './public/volunteering.jpg'
+// import workshop from './public/workshop.jpg'
 
 export interface Fruit {
   id: number
@@ -81,7 +81,7 @@ export const eventsData = [
     id: 1,
     title: 'UPCOMING EVENTS',
     subtitle: "WORLD'S REFUGEE DAY",
-    image: wrd,
+    image: event,
     videoUrl:
       'https://www.istockphoto.com/video/older-female-mentor-leader-talking-at-executive-team-meeting-in-board-room-gm1336770010-417912181.mp4',
     description: 'Celebrating World Refugee Day with former refugee 2024.',
@@ -92,7 +92,7 @@ export const eventsData = [
     id: 2,
     title: 'UPCOMING EVENTS',
     subtitle: 'VOLUNTEERING',
-    image: volunteering,
+    image: event,
     description:
       'Honoring our volunteers for their incredible work in our organization.',
     videoUrl:
@@ -104,7 +104,7 @@ export const eventsData = [
     id: 3,
     title: 'UPCOMING EVENTS',
     subtitle: 'WORKSHOP',
-    image: workshop,
+    image: event,
     description:
       'Giving former refugees opportunity to showcase their traditional cultural treasures.',
     videoUrl:

@@ -24,23 +24,12 @@ const Event = () => {
                   {event.subtitle}
                 </h3>
                 <div className="relative h-64 w-full">
-                  {event.videoUrl ? (
-                    <video
-                      src={event.videoUrl}
-                      autoPlay
-                      loop
-                      muted
-                      className="h-full w-full object-cover"
-                    >
-                      Your browser does not support the video tag.
-                    </video>
-                  ) : (
-                    <img
-                      src={event.image}
-                      alt={event.subtitle}
-                      className="h-full w-full object-cover"
-                    />
-                  )}
+                  <img
+                    src={event.image}
+                    alt={event.subtitle}
+                    className="h-full w-full object-cover"
+                  />
+
                   <div className="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-25 p-4 text-white">
                     <p className="mb-2 text-xl font-semibold">
                       {event.description}

@@ -30,7 +30,7 @@ const Reason = () => {
           </div>
 
           {/* Second Card */}
-          <div className="flex items-center rounded-lg bg-red-700 p-6 shadow-md">
+          <div className="flex items-center rounded-lg bg-cyan-600 p-6 shadow-md">
             <div className="relative mr-4 flex w-3/5 items-center justify-center">
               <FaTint
                 className="text-9xl text-gray-900 opacity-50"
@@ -49,7 +49,7 @@ const Reason = () => {
           </div>
 
           {/* Third Card */}
-          <div className="flex items-center rounded-lg bg-red-700 p-6 shadow-md">
+          <div className="flex items-center rounded-lg bg-cyan-600 p-6 shadow-md">
             <div className="relative mr-4 flex w-3/5 items-center justify-center">
               <FaUsers
                 className="text-9xl text-gray-900 opacity-50"

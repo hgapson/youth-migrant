@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import cover from '../public/helping.jpg'
+import cover from '../public/helping-hand.jpg'
 import { Link } from 'react-router-dom'
 import Aos from 'aos'
 import 'aos/dist/aos.css'
