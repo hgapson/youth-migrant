@@ -1,6 +1,7 @@
 import Background from './Background' // Adjust the path as per your project structure
 import Event from './Events'
-// import Reason from './Reason'
+import FancySection from './Impact'
+import Reason from './Reason'
 import '../main.scss'
 // import GetInvolved from './GetInvolved'
 // import ImageCardSection from './Partners'
@@ -16,6 +17,13 @@ const Home = () => {
       </div>
       <div className="event">
         <Event />
+      </div>
+      <div className="impact">
+        <FancySection />
+      </div>
+
+      <div className="reason">
+        <Reason />
       </div>
 
       {/* Your main content here */}

@@ -11,10 +11,10 @@ const Reason = () => {
         <div className="grid gap-8 md:grid-cols-3">
           {/* First Card */}
           <div className="rounded-lg p-6">
-            <h2 className="mb-4 text-4xl font-semibold text-white">
+            <h2 className="mb-4 text-4xl font-semibold text-black">
               Why refugees
             </h2>
-            <p className="text-white">
+            <p className="text-black">
               We focus on finding lasting solutions for at-risk refugees. We
               believe that everyone benefits when refugees are given a chance to
               use their talents and skills to contribute to their host countries

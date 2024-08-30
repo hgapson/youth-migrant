@@ -14,7 +14,6 @@ const Event = () => {
 
   return (
     <section className="relative  bg-sky-300 px-4 py-12 md:px-8 lg:px-16">
-      <div className="absolute inset-0 opacity-50"></div>
       <div className="relative z-10 mx-auto max-w-7xl text-center">
         <h2 className="mb-8 text-4xl font-bold text-black">UPCOMING EVENTS</h2>
         <div>
