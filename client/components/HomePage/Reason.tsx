@@ -1,71 +1,102 @@
 //import React from 'react'
 import { Link } from 'react-router-dom'
-import { FaTint, FaUsers } from 'react-icons/fa'
+import {
+  FaBriefcase,
+  FaHandshake,
+  FaChartLine,
+  FaPeopleCarry,
+} from 'react-icons/fa'
 import Aos from 'aos'
 import 'aos/dist/aos.css'
 
 const Reason = () => {
   return (
-    <section className="px-4 py-12 sm:px-6 lg:px-8">
-      <div className="container mx-auto max-w-4xl text-white ">
-        <div className="grid gap-8 md:grid-cols-3">
-          {/* First Card */}
-          <div className="rounded-lg p-6">
-            <h2 className="mb-4 text-4xl font-semibold text-black">
-              Why refugees
-            </h2>
-            <p className="text-black">
-              We focus on finding lasting solutions for at-risk refugees. We
-              believe that everyone benefits when refugees are given a chance to
-              use their talents and skills to contribute to their host countries
-              and to the world.
-            </p>
-            <Link to="/why-we-help">
-              <div className="mt-4 flex justify-center">
-                <button className="rounded bg-blue-500 px-4 py-2 text-white transition-colors duration-300 hover:bg-blue-600">
-                  Learn More
-                </button>
-              </div>
-            </Link>
-          </div>
+    <section className="relative bg-gradient-to-b from-blue-400 to-cyan-600 py-16 text-white">
+      <div className="container mx-auto px-4 text-center sm:px-6 lg:px-8">
+        {/* Main Title */}
+        <h2 className="mb-8 text-4xl font-extrabold" data-aos="fade-down">
+          Why We Support Refugees in Employment
+        </h2>
 
-          {/* Second Card */}
-          <div className="flex items-center rounded-lg bg-cyan-600 p-6 shadow-md">
-            <div className="relative mr-4 flex w-3/5 items-center justify-center">
-              <FaTint
-                className="text-9xl text-gray-900 opacity-50"
-                style={{ width: '200px', height: '200px' }}
-              />
-              <h2
-                data-aos="fade-up"
-                className="absolute text-6xl font-semibold text-white"
-              >
-                80%
-              </h2>
-            </div>
-            <p data-aos="fade-up" className="w-2/5 text-white">
-              of them need orientation in new country and advocacy.
+        {/* Main Content with Cards */}
+        <div
+          className="mx-auto mb-12 grid max-w-4xl grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4"
+          data-aos="fade-up"
+        >
+          <div className="flex transform flex-col items-center rounded-lg bg-white p-6 text-black shadow-lg transition duration-500 hover:scale-105">
+            <FaBriefcase size={48} className="mb-4 text-yellow-500" />
+            <h3 className="mb-2 text-xl font-semibold">Career Opportunities</h3>
+            <p className="text-center text-base">
+              Providing former refugees with access to meaningful employment
+              that matches their skills and aspirations.
             </p>
           </div>
+          <div className="flex transform flex-col items-center rounded-lg bg-white p-6 text-black shadow-lg transition duration-500 hover:scale-105">
+            <FaHandshake size={48} className="mb-4 text-green-500" />
+            <h3 className="mb-2 text-xl font-semibold">Building Connections</h3>
+            <p className="text-center text-base">
+              Connecting refugees with employers who value diversity and
+              inclusion in the workplace.
+            </p>
+          </div>
+          <div className="flex transform flex-col items-center rounded-lg bg-white p-6 text-black shadow-lg transition duration-500 hover:scale-105">
+            <FaChartLine size={48} className="mb-4 text-blue-500" />
+            <h3 className="mb-2 text-xl font-semibold">Economic Growth</h3>
+            <p className="text-center text-base">
+              Supporting refugees as they contribute to the economy and build a
+              better future for themselves and their communities.
+            </p>
+          </div>
+          <div className="flex transform flex-col items-center rounded-lg bg-white p-6 text-black shadow-lg transition duration-500 hover:scale-105">
+            <FaPeopleCarry size={48} className="mb-4 text-pink-500" />
+            <h3 className="mb-2 text-xl font-semibold">Community Support</h3>
+            <p className="text-center text-base">
+              Empowering refugees through community-driven initiatives and
+              mentorship programs.
+            </p>
+          </div>
+        </div>
 
-          {/* Third Card */}
-          <div className="flex items-center rounded-lg bg-cyan-600 p-6 shadow-md">
-            <div className="relative mr-4 flex w-3/5 items-center justify-center">
-              <FaUsers
-                className="text-9xl text-gray-900 opacity-50"
-                style={{ width: '200px', height: '200px' }}
-              />
-              <h2
-                data-aos="fade-up"
-                className="absolute text-6xl font-semibold text-white"
-              >
-                92%
-              </h2>
+        {/* Highlighted Facts Section */}
+        <div className="grid grid-cols-1 gap-12 md:grid-cols-2">
+          <div
+            className="relative flex flex-col items-center rounded-lg bg-cyan-500 p-8 text-black shadow-lg"
+            data-aos="fade-right"
+          >
+            <div className="mb-4 text-blue-600">
+              <FaBriefcase size={64} />
             </div>
-            <p data-aos="fade-up" className="w-2/5 text-white">
-              of refugees need good life and support.
+            <h3 className="mb-4 text-4xl font-bold">70%</h3>
+            <p className="text-center text-lg">
+              of refugees we support have secured long-term employment within a
+              year.
             </p>
           </div>
+          <div
+            className="relative flex flex-col items-center rounded-lg bg-cyan-500 p-8 text-black shadow-lg"
+            data-aos="fade-left"
+          >
+            <div className="mb-4 text-blue-600">
+              <FaHandshake size={64} />
+            </div>
+            <h3 className="mb-4 text-4xl font-bold">85%</h3>
+            <p className="text-center text-lg">
+              of employers report high satisfaction with the skills and work
+              ethic of the refugees they hire.
+            </p>
+          </div>
+        </div>
+
+        {/* Call to Action */}
+        <div className="mt-16">
+          <Link to="/why-we-help">
+            <button
+              className="rounded-full bg-white px-8 py-3 text-lg font-semibold text-blue-600 shadow-lg transition-colors duration-300 hover:bg-gray-100"
+              data-aos="fade-up"
+            >
+              Learn More
+            </button>
+          </Link>
         </div>
       </div>
     </section>
