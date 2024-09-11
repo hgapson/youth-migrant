@@ -7,13 +7,13 @@ const JobSolutionsSection: React.FC = () => {
     <section className="relative bg-cyan-600 px-6 py-16 sm:px-12 lg:px-24">
       <div className="container mx-auto">
         {/* Section Title */}
-        <h2 className="mb-8 text-center text-4xl font-extrabold text-gray-300">
-          Job Solutions for Migrants
+        <h2 className="mb-8 text-center text-4xl font-extrabold text-gray-100">
+          Job Solutions
         </h2>
         {/* Decorative Divider */}
         <div className="mx-auto mb-8 h-1 w-24 rounded-full bg-indigo-800"></div>
         {/* Section Summary */}
-        <p className="mb-12 text-center text-lg leading-relaxed text-gray-300">
+        <p className="mb-12 text-center text-lg leading-relaxed text-gray-100">
           We are committed to empowering migrants by providing tailored job
           solutions. Our approach ensures they can smoothly integrate into the
           workforce, overcome barriers, and find meaningful employment that
