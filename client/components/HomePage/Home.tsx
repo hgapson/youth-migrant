@@ -2,6 +2,7 @@ import Background from './Background' // Adjust the path as per your project str
 import Event from './Events'
 import FancySection from './Impact'
 import Reason from './Reason'
+import JobSolution from './JobSolution'
 import '../main.scss'
 // import GetInvolved from './GetInvolved'
 // import ImageCardSection from './Partners'
@@ -24,6 +25,9 @@ const Home = () => {
 
       <div className="reason">
         <Reason />
+      </div>
+      <div className="jobSolution">
+        <JobSolution />
       </div>
 
       {/* Your main content here */}

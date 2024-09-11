@@ -15,7 +15,7 @@ const Reason = () => {
       <div className="container mx-auto px-4 text-center sm:px-6 lg:px-8">
         {/* Main Title */}
         <h2 className="mb-8 text-4xl font-extrabold" data-aos="fade-down">
-          Why We Support Refugees in Employment
+          Why We Support Migrants
         </h2>
 
         {/* Main Content with Cards */}
@@ -68,7 +68,7 @@ const Reason = () => {
             </div>
             <h3 className="mb-4 text-4xl font-bold">70%</h3>
             <p className="text-center text-lg">
-              of refugees we support have secured long-term employment within a
+              of migrants we support have secured long-term employment within a
               year.
             </p>
           </div>
@@ -82,7 +82,7 @@ const Reason = () => {
             <h3 className="mb-4 text-4xl font-bold">85%</h3>
             <p className="text-center text-lg">
               of employers report high satisfaction with the skills and work
-              ethic of the refugees they hire.
+              ethic of the migrants they hire.
             </p>
           </div>
         </div>
@@ -91,7 +91,7 @@ const Reason = () => {
         <div className="mt-16">
           <Link to="/why-we-help">
             <button
-              className="rounded-full bg-white px-8 py-3 text-lg font-semibold text-blue-600 shadow-lg transition-colors duration-300 hover:bg-gray-100"
+              className="rounded-full bg-white px-8 py-3 text-lg font-semibold text-blue-600 shadow-lg transition-colors duration-300 hover:bg-gray-300"
               data-aos="fade-up"
             >
               Learn More
