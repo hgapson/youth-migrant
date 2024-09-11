@@ -3,6 +3,7 @@ import Event from './Events'
 import FancySection from './Impact'
 import Reason from './Reason'
 import JobSolution from './JobSolution'
+import JobListing from './JobsListing'
 import '../main.scss'
 // import GetInvolved from './GetInvolved'
 // import ImageCardSection from './Partners'
@@ -28,6 +29,9 @@ const Home = () => {
       </div>
       <div className="jobSolution">
         <JobSolution />
+      </div>
+      <div className="jobListing">
+        <JobListing />
       </div>
 
       {/* Your main content here */}

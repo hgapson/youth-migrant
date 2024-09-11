@@ -21,7 +21,7 @@ const JobSolutionsSection: React.FC = () => {
         </p>
 
         {/* Two Solution Divs with Fancy Effects (Horizontal Layout) */}
-        <div className="grid gap-10 sm:grid-cols-1 lg:grid-cols-2">
+        <div className="grid gap-10 sm:grid-cols-1 lg:grid-cols-2 ">
           {/* First Solution */}
           <div className="flex flex-col items-center rounded-lg bg-white p-6 shadow-lg lg:flex-row lg:items-start">
             {/* Image on the Left */}
