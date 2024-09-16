@@ -5,7 +5,7 @@ import {
   FaInstagram,
   FaLinkedinIn,
 } from 'react-icons/fa'
-import { teamData, TeamMember } from './models'
+import { teamData, TeamMember } from './Model'
 
 const Team: React.FC = () => {
   const [activeSection, setActiveSection] = useState<

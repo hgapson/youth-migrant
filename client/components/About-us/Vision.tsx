@@ -1,33 +1,32 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faLightbulb, faBullseye } from '@fortawesome/free-solid-svg-icons'
+// components/MissionVisionSection.tsx
 
-const VisionMissionValues = () => {
+import React from 'react'
+import { FaBullhorn, FaEye } from 'react-icons/fa'
+
+const MissionVisionSection: React.FC = () => {
   return (
-    <section className="mx-auto max-w-6xl bg-blue-950 py-16">
-      <div className="container mx-auto px-6">
-        <div className="grid gap-12 md:grid-cols-3 ">
-          {/* Vision */}
-          <div className="text-center">
-            <FontAwesomeIcon
-              icon={faLightbulb}
-              className="mx-auto h-12 w-12 text-blue-500"
-            />
-            <h3 className="mt-4 text-xl font-semibold">Vision</h3>
-            <p className="mt-2 text-gray-300">
-              A brief description of your long-term goals and aspirations.
+    <section className="bg-gray-100 py-16 text-center">
+      <h2 className="mb-8 text-3xl font-extrabold">Our Mission & Vision</h2>
+      <div className="mx-auto grid max-w-4xl grid-cols-1 gap-8 px-6 md:grid-cols-2">
+        <div className="flex items-center rounded-lg bg-white p-6 shadow-lg">
+          <FaBullhorn className="mr-4 text-4xl text-blue-600" />
+          <div>
+            <h3 className="mb-2 text-xl font-semibold">Mission</h3>
+            <p>
+              Our mission is to empower migrants by providing comprehensive
+              support and resources to help them integrate and thrive in their
+              new communities.
             </p>
           </div>
-
-          {/* Mission */}
-          <div className="text-center">
-            <FontAwesomeIcon
-              icon={faBullseye}
-              className="mx-auto h-12 w-12 text-green-500"
-            />
-            <h3 className="mt-4 text-xl font-semibold">Mission</h3>
-            <p className="mt-2 text-gray-300">
-              A clear statement outlining your organizations purpose and
-              objectives.
+        </div>
+        <div className="flex items-center rounded-lg bg-white p-6 shadow-lg">
+          <FaEye className="mr-4 text-4xl text-green-600" />
+          <div>
+            <h3 className="mb-2 text-xl font-semibold">Vision</h3>
+            <p>
+              We envision a world where every migrant has the opportunity to
+              achieve their potential and contribute meaningfully to their new
+              society.
             </p>
           </div>
         </div>
@@ -36,4 +35,4 @@ const VisionMissionValues = () => {
   )
 }
 
-export default VisionMissionValues
+export default MissionVisionSection
