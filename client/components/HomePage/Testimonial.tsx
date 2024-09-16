@@ -1,63 +1,86 @@
-// src/components/TestimonialsSection.tsx
+import React from 'react'
+import backgroundImage from '../public/enjoy3.jpg' // Replace with your image path
+import user1 from '../public/pesonInjoying1.jpg'
+import user2 from '../public/impact.jpg'
+import user3 from '../public/training.jpg'
 
-import { useState, useEffect } from 'react'
-import { useNavigate } from 'react-router-dom'
-import { FaQuoteLeft } from 'react-icons/fa'
-import testimonial from '../public/testimonial.jpg'
-import { testimonialsData } from '../models'
-import '../main.scss'
-
-const TestimonialsSection = () => {
-  const [currentTestimonial, setCurrentTestimonial] = useState(0)
-  const navigate = useNavigate()
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentTestimonial(Math.floor(Math.random() * testimonialsData.length))
-    }, 5000) // Change testimonial every 5 seconds
-
-    return () => clearInterval(interval)
-  }, [])
-
-  const { name, message } = testimonialsData[currentTestimonial]
-
-  const handleMoreStoriesClick = () => {
-    navigate('/about-us#testimonies')
-  }
-
+const TestimonialsSection: React.FC = () => {
   return (
-    <section className="bg-blue-950 px-4 py-12 sm:px-6 lg:px-8">
-      <h2 className="mb-8 text-center text-3xl font-bold text-white md:w-full">
-        Testimonials
-      </h2>
+    <section
+      className="relative bg-cover bg-center bg-no-repeat py-16"
+      style={{ backgroundImage: `url(${backgroundImage})` }}
+    >
+      <div className="container mx-auto text-center">
+        <h2 className="mb-8 text-4xl font-extrabold text-white">
+          What Our Clients Say
+        </h2>
 
-      <div className="container mx-auto flex flex-col items-center justify-center md:flex-row">
-        {/* Fixed Image */}
-        <div className="relative mb-8 h-full w-full md:mb-0 md:w-1/2">
-          <div className="parallelogram-container transition-transform duration-300 ease-in-out hover:scale-105">
+        <div className="mx-auto mb-8 h-1 w-24 rounded-full bg-indigo-800"></div>
+
+        {/* Testimonials Cards */}
+        <div className="grid gap-8 sm:grid-cols-1 lg:grid-cols-3">
+          {/* Testimonial 1 */}
+          <div className="rounded-lg bg-white bg-opacity-80 p-6 shadow-lg backdrop-blur-lg">
             <img
-              src={testimonial}
-              alt="Testimonial"
-              className="parallelogram h-full w-full"
+              src={user1}
+              alt="Client 1"
+              className="mx-auto mb-4 h-24 w-24 rounded-full object-cover shadow-lg"
             />
+            <h3 className="mb-2 text-xl font-semibold text-indigo-600">
+              Jane Doe
+            </h3>
+            <p className="text-gray-700">
+              “This organization helped me find a job within weeks! The support
+              and training were incredible.”
+            </p>
+          </div>
+
+          {/* Testimonial 2 */}
+          <div className="rounded-lg bg-white bg-opacity-80 p-6 shadow-lg backdrop-blur-lg">
+            <img
+              src={user2}
+              alt="Client 2"
+              className="mx-auto mb-4 h-24 w-24 rounded-full object-cover shadow-lg"
+            />
+            <h3 className="mb-2 text-xl font-semibold text-indigo-600">
+              John Smith
+            </h3>
+            <p className="text-gray-700">
+              “I was able to upskill and land a job that matches my experience.
+              The team was very supportive.”
+            </p>
+          </div>
+
+          {/* Testimonial 3 */}
+          <div className="rounded-lg bg-white bg-opacity-80 p-6 shadow-lg backdrop-blur-lg">
+            <img
+              src={user3}
+              alt="Client 3"
+              className="mx-auto mb-4 h-24 w-24 rounded-full object-cover shadow-lg"
+            />
+            <h3 className="mb-2 text-xl font-semibold text-indigo-600">
+              Emily Johnson
+            </h3>
+            <p className="text-gray-700">
+              “Thanks to their training programs, I transitioned into a new
+              career with confidence.”
+            </p>
           </div>
         </div>
 
-        {/* Testimonial Message */}
-        <div className="flex flex-col justify-center md:w-1/2">
-          <div className="testimonial-message relative bg-white p-6 text-gray-700 shadow-lg">
-            <FaQuoteLeft className="absolute left-0 top-0 ml-2 mt-2 text-4xl text-gray-300" />
-            <p className="mb-4 mt-8 italic ">{message}</p>
-            <h3 className="text-lg font-medium">{name}</h3>
-            <button
-              onClick={handleMoreStoriesClick}
-              className="btn mt-4 rounded-lg bg-blue-500 px-4 py-2 text-white transition-colors duration-300 hover:bg-blue-600"
-            >
-              More Stories
-            </button>
-          </div>
+        {/* Read More Button */}
+        <div className="mt-8">
+          <a
+            href="/testimonials"
+            className="rounded-full bg-indigo-600 px-8 py-3 text-lg font-semibold text-white shadow-lg transition-colors duration-300 hover:bg-indigo-700"
+          >
+            Read More
+          </a>
         </div>
       </div>
+
+      {/* Background Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black opacity-50"></div>
     </section>
   )
 }

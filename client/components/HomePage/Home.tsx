@@ -7,7 +7,7 @@ import JobListing from './JobsListing'
 import '../main.scss'
 // import GetInvolved from './GetInvolved'
 // import ImageCardSection from './Partners'
-// import TestimonialsSection from './Testimonial'
+import TestimonialsSection from './Testimonial'
 // import News from './News'
 //import News from './News'
 
@@ -32,6 +32,9 @@ const Home = () => {
       </div>
       <div className="jobListing">
         <JobListing />
+      </div>
+      <div className='testimonies'>
+        <TestimonialsSection />
       </div>
 
       {/* Your main content here */}
