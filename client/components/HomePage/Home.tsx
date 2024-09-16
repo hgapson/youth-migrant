@@ -8,7 +8,7 @@ import '../main.scss'
 // import GetInvolved from './GetInvolved'
 // import ImageCardSection from './Partners'
 import TestimonialsSection from './Testimonial'
-// import News from './News'
+import ContactUsSection from './ContactUs'
 //import News from './News'
 
 const Home = () => {
@@ -33,8 +33,11 @@ const Home = () => {
       <div className="jobListing">
         <JobListing />
       </div>
-      <div className='testimonies'>
+      <div className="testimonies">
         <TestimonialsSection />
+      </div>
+      <div>
+        <ContactUsSection />
       </div>
 
       {/* Your main content here */}

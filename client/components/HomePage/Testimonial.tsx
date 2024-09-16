@@ -15,7 +15,7 @@ const TestimonialsSection: React.FC = () => {
           What Our Clients Say
         </h2>
 
-        <div className="mx-auto mb-8 h-1 w-24 rounded-full bg-indigo-800"></div>
+        <div className="mx-auto mb-8 h-1 w-24 rounded-full bg-indigo-100"></div>
 
         {/* Testimonials Cards */}
         <div className="grid gap-8 sm:grid-cols-1 lg:grid-cols-3">
