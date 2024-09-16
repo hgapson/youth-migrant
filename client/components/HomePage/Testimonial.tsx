@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import backgroundImage from '../public/enjoy3.jpg' // Replace with your image path
 import user1 from '../public/pesonInjoying1.jpg'
 import user2 from '../public/impact.jpg'
@@ -70,12 +71,12 @@ const TestimonialsSection: React.FC = () => {
 
         {/* Read More Button */}
         <div className="mt-8">
-          <a
-            href="/testimonials"
-            className="rounded-full bg-indigo-600 px-8 py-3 text-lg font-semibold text-white shadow-lg transition-colors duration-300 hover:bg-indigo-700"
+          <Link
+            to="/testimonials"
+            className="relative z-10 inline-block rounded-full bg-indigo-600 px-8 py-3 text-lg font-semibold text-white shadow-lg transition duration-300 hover:bg-indigo-700"
           >
             Read More
-          </a>
+          </Link>
         </div>
       </div>
 

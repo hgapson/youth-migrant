@@ -28,24 +28,6 @@ const Footer = () => {
       {/* Overlay Content */}
       <div className="absolute inset-0 flex flex-col items-center justify-center overflow-auto bg-black bg-opacity-40 p-4">
         {/* Contact Form */}
-        <div className="mx-auto mb-6 flex max-w-lg flex-col items-center sm:mb-8">
-          <div className="mb-4 text-center text-white">
-            <h2 className="font-times text-xl md:text-2xl">
-              Subscribe To Our News Letter
-            </h2>
-          </div>
-
-          <div className="flex w-full flex-col gap-2 sm:flex-row sm:gap-4">
-            <input
-              className="mb-2 w-full rounded-md border-none p-2 sm:mb-0 sm:w-2/3"
-              type="text"
-              placeholder="Your email"
-            />
-            <button className="flex w-full items-center rounded-md bg-blue-500 px-4 py-2 text-white hover:bg-blue-600 sm:w-1/3">
-              <span>Subscribe</span>
-            </button>
-          </div>
-        </div>
 
         {/* Footer Cards */}
         <div className="mx-auto flex w-full max-w-screen-xl flex-col gap-2 rounded-lg bg-gray-100 bg-opacity-80 p-4 md:p-6 lg:flex-row lg:p-8">

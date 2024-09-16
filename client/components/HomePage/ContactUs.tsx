@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import AOS from 'aos'
-import 'aos/dist/aos.css' // Import AOS styles
+import 'aos/dist/aos.css'
 
 const ContactUsSection: React.FC = () => {
   useEffect(() => {
@@ -29,14 +30,12 @@ const ContactUsSection: React.FC = () => {
           here to help. Reach out to us and let’s connect.
         </p>
 
-        <a
-          href="/contact"
-          className="inline-block rounded-full bg-indigo-600 px-8 py-3 text-lg font-semibold text-white shadow-lg transition-transform duration-500 hover:scale-105"
-          data-aos="zoom-in"
-          data-aos-delay="400"
+        <Link
+          to="/testimonials"
+          className="relative z-10 inline-block rounded-full bg-indigo-600 px-8 py-3 text-lg font-semibold text-white shadow-lg transition duration-300 hover:bg-indigo-700"
         >
           Contact Us
-        </a>
+        </Link>
       </div>
 
       <div className="absolute bottom-0 right-0 h-32 w-32 -translate-y-16 translate-x-16 transform rounded-full bg-indigo-200 opacity-50 blur-xl"></div>
