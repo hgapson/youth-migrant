@@ -1,4 +1,6 @@
 // src/models.ts
+
+import { FaFlag, FaHandshake, FaBuilding } from 'react-icons/fa'
 export interface TeamMember {
   name: string
   position: string
@@ -45,3 +47,34 @@ export const teamData: TeamData = {
     // Add more leadership team members as needed
   ],
 }
+export interface Milestone {
+  year: string
+  title: string
+  description: string
+}
+
+// Model.ts
+
+export const milestones = [
+  {
+    year: '2010',
+    title: 'Foundation',
+    description:
+      'Our organization was founded with a mission to support migrants.',
+    icon: FaFlag,
+  },
+  {
+    year: '2015',
+    title: 'Expansion',
+    description:
+      'We expanded our services to multiple cities and started new programs.',
+    icon: FaHandshake,
+  },
+  {
+    year: '2020',
+    title: 'Recognition',
+    description:
+      'Received recognition and awards for our impactful work in the community.',
+    icon: FaBuilding,
+  },
+]
