@@ -45,25 +45,6 @@ export const sections = [
   },
 ]
 
-// Add more testimonies objects as needed
-export const testimonialsData = [
-  {
-    name: 'John Doe',
-    message:
-      'This organization has changed my life. Their support has been invaluable.',
-  },
-  {
-    name: 'Jane Smith',
-    message:
-      'I am so grateful for the assistance I received. They truly care about people.',
-  },
-  {
-    name: 'Samuel Green',
-    message:
-      'Thanks to their programs, I was able to start a new chapter in my life.',
-  },
-]
-
 // Add more events objects as needed
 
 export interface Event {

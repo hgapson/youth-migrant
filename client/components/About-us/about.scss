@@ -8,3 +8,19 @@
   color: white; 
   font-size: 14px; 
 }
+
+/* For fading in and out */
+.fade-in {
+  opacity: 1;
+  transition: opacity 0.5s ease-in;
+}
+
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
+}
+
+/* Add some stylish transitions */
+.transition-transform {
+  transition: transform 0.5s ease-in-out;
+}

@@ -56,7 +56,7 @@ const About = () => {
   }, [])
 
   return (
-    <main className="main-container bg-gray-100">
+    <main className="main-container bg-cyan-600">
       <div>
         <BackgroundSection />
         <MissionVisionSection />

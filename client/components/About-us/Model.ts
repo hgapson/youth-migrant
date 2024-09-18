@@ -78,3 +78,35 @@ export const milestones = [
     icon: FaBuilding,
   },
 ]
+
+// Testimonies
+export const testimonies = [
+  {
+    name: 'John Doe',
+    testimony:
+      'The support I received from this organization was phenomenal. They helped me every step of the way.',
+    image: 'https://randomuser.me/api/portraits/men/32.jpg',
+    rating: 5,
+  },
+  {
+    name: 'Jane Smith',
+    testimony:
+      'Thanks to their guidance and resources, I was able to find a job that perfectly matches my skills.',
+    image: 'https://randomuser.me/api/portraits/women/44.jpg',
+    rating: 4,
+  },
+  {
+    name: 'Michael Johnson',
+    testimony:
+      'This organization gave me the confidence and tools I needed to succeed in a new country.',
+    image: 'https://randomuser.me/api/portraits/men/58.jpg',
+    rating: 5,
+  },
+  {
+    name: 'Emma Wilson',
+    testimony:
+      'Their team is dedicated, and I felt truly supported during my journey. I’m forever grateful!',
+    image: 'https://randomuser.me/api/portraits/women/60.jpg',
+    rating: 4,
+  },
+]

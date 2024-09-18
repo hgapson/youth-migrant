@@ -1,11 +1,14 @@
+// components/TestimonialsSection.tsx
+
 import React from 'react'
 import { Link } from 'react-router-dom'
-import backgroundImage from '../public/enjoy3.jpg' // Replace with your image path
-import user1 from '../public/pesonInjoying1.jpg'
-import user2 from '../public/impact.jpg'
-import user3 from '../public/training.jpg'
+import backgroundImage from '../public/enjoy3.jpg'
+import { testimonies } from '../About-us/Model'
+import { FaStar } from 'react-icons/fa'
 
 const TestimonialsSection: React.FC = () => {
+  const selectedTestimonies = testimonies.slice(0, 3) // Get the first 3 testimonies
+
   return (
     <section
       className="relative bg-cover bg-center bg-no-repeat py-16"
@@ -20,53 +23,29 @@ const TestimonialsSection: React.FC = () => {
 
         {/* Testimonials Cards */}
         <div className="grid gap-8 sm:grid-cols-1 lg:grid-cols-3">
-          {/* Testimonial 1 */}
-          <div className="rounded-lg bg-white bg-opacity-80 p-6 shadow-lg backdrop-blur-lg">
-            <img
-              src={user1}
-              alt="Client 1"
-              className="mx-auto mb-4 h-24 w-24 rounded-full object-cover shadow-lg"
-            />
-            <h3 className="mb-2 text-xl font-semibold text-indigo-600">
-              Jane Doe
-            </h3>
-            <p className="text-gray-700">
-              “This organization helped me find a job within weeks! The support
-              and training were incredible.”
-            </p>
-          </div>
-
-          {/* Testimonial 2 */}
-          <div className="rounded-lg bg-white bg-opacity-80 p-6 shadow-lg backdrop-blur-lg">
-            <img
-              src={user2}
-              alt="Client 2"
-              className="mx-auto mb-4 h-24 w-24 rounded-full object-cover shadow-lg"
-            />
-            <h3 className="mb-2 text-xl font-semibold text-indigo-600">
-              John Smith
-            </h3>
-            <p className="text-gray-700">
-              “I was able to upskill and land a job that matches my experience.
-              The team was very supportive.”
-            </p>
-          </div>
-
-          {/* Testimonial 3 */}
-          <div className="rounded-lg bg-white bg-opacity-80 p-6 shadow-lg backdrop-blur-lg">
-            <img
-              src={user3}
-              alt="Client 3"
-              className="mx-auto mb-4 h-24 w-24 rounded-full object-cover shadow-lg"
-            />
-            <h3 className="mb-2 text-xl font-semibold text-indigo-600">
-              Emily Johnson
-            </h3>
-            <p className="text-gray-700">
-              “Thanks to their training programs, I transitioned into a new
-              career with confidence.”
-            </p>
-          </div>
+          {selectedTestimonies.map((testimony, index) => (
+            <div
+              key={index}
+              className="rounded-lg bg-white bg-opacity-80 p-6 shadow-lg backdrop-blur-lg"
+            >
+              <img
+                src={testimony.image}
+                alt={testimony.name}
+                className="mx-auto mb-4 h-24 w-24 rounded-full border-4 border-indigo-600 object-cover"
+              />
+              <h3 className="mb-2 text-xl font-semibold text-indigo-600">
+                {testimony.name}
+              </h3>
+              <div className="mb-4 flex justify-center">
+                {Array(testimony.rating)
+                  .fill(0)
+                  .map((_, i) => (
+                    <FaStar key={i} className="text-yellow-500" />
+                  ))}
+              </div>
+              <p className="text-gray-700">“{testimony.testimony}”</p>
+            </div>
+          ))}
         </div>
 
         {/* Read More Button */}

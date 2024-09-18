@@ -3,18 +3,18 @@ import { milestones } from './Model'
 
 const OrganizationStoriesSection: React.FC = () => {
   return (
-    <section className="flex min-h-screen items-center justify-center bg-gray-50 py-16">
-      <div className="text-center">
-        <h2 className="mb-8 text-4xl font-extrabold text-gray-800">
-          Our Story: Age by Age
+    <section className="bg-cyan-600 py-16">
+      <div className="mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
+        <h2 className="mb-8 text-4xl font-extrabold text-gray-100">
+          Our Story
         </h2>
-        <p className="mx-auto mb-12 max-w-3xl text-lg text-gray-700">
+        <p className="mx-auto mb-12 max-w-3xl text-lg text-gray-200">
           Discover how we evolved from a small group with a vision into a
           leading organization in migrant support. Here is a timeline of our
           journey and achievements over the years.
         </p>
 
-        <div className="mx-auto flex max-w-6xl grid-cols-1 gap-8 px-6 md:grid-cols-2 lg:grid-cols-4">
+        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {milestones.map((milestone, index) => {
             const IconComponent = milestone.icon
             const isEven = index % 2 === 0
