@@ -5,10 +5,10 @@ const OrganizationStoriesSection: React.FC = () => {
   return (
     <section className="bg-cyan-600 py-16">
       <div className="mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
-        <h2 className="mb-8 text-4xl font-extrabold text-gray-100">
+        <h2 className="mb-8 text-4xl font-extrabold text-gray-800">
           Our Story
         </h2>
-        <p className="mx-auto mb-12 max-w-3xl text-lg text-gray-200">
+        <p className="mx-auto mb-12 max-w-3xl text-lg text-gray-800">
           Discover how we evolved from a small group with a vision into a
           leading organization in migrant support. Here is a timeline of our
           journey and achievements over the years.

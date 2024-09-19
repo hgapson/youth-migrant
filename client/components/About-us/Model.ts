@@ -1,6 +1,10 @@
 // src/models.ts
 
 import { FaFlag, FaHandshake, FaBuilding } from 'react-icons/fa'
+import wrf from '../public/WRF logo.jpg'
+import migration from '../public/migration.png'
+import winz from '../public/winz.jpg'
+import settlement from '../public/settlement.jpg'
 export interface TeamMember {
   name: string
   position: string
@@ -36,13 +40,13 @@ export const teamData: TeamData = {
       position: 'CEO',
       description:
         'Emily is responsible for the overall operations of the company.',
-      image: '/path/to/emily_johnson.jpg',
+      image: 'https://randomuser.me/api/portraits/men/32.jpg',
     },
     {
       name: 'Michael Brown',
       position: 'CTO',
       description: 'Michael leads the technology and innovation strategies.',
-      image: '/path/to/michael_brown.jpg',
+      image: 'https://randomuser.me/api/portraits/women/44.jpg',
     },
     // Add more leadership team members as needed
   ],
@@ -108,5 +112,25 @@ export const testimonies = [
       'Their team is dedicated, and I felt truly supported during my journey. I’m forever grateful!',
     image: 'https://randomuser.me/api/portraits/women/60.jpg',
     rating: 4,
+  },
+]
+
+// Partners
+
+export const partners = [
+  {
+    name: 'Partner 1',
+    logo: winz,
+    website: 'https://www.partner1.com',
+  },
+  {
+    name: 'Partner 2',
+    logo: wrf,
+    website: 'https://www.partner2.com',
+  },
+  {
+    name: 'Partner 3',
+    logo: migration,
+    website: 'https://www.workandincome.govt.nz/',
   },
 ]

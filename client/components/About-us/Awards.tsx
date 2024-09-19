@@ -5,7 +5,7 @@ import { FaAward } from 'react-icons/fa'
 
 const OrganizationAwardsSection: React.FC = () => {
   return (
-    <section className="bg-white py-16 text-center">
+    <section className="bg-cyan-600 py-16 text-center">
       <h2 className="mb-8 text-3xl font-extrabold">Organization Awards</h2>
       <div className="mx-auto max-w-4xl px-6">
         <div className="flex flex-col items-center rounded-lg bg-gray-100 p-8 shadow-lg">
