@@ -7,7 +7,7 @@ function Logo() {
       <img
         src={logo}
         alt="Logo"
-        className="h-20 w-20 md:h-24 md:w-24 lg:h-28 lg:w-28"
+        className="h-20 w-20 md:h-24 md:w-24 lg:h-28 lg:w-40"
       />
     </div>
   )

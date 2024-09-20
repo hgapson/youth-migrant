@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import { FaMapMarkerAlt, FaBriefcase, FaClock } from 'react-icons/fa'
-import { Job, jobList } from './Model'
-import ApplicationModal from './ApplicationModal'
+import { Job, jobList } from './Models'
+// import ApplicationModal from './ApplicationModal'
 
 const JobDetail: React.FC = () => {
   const { id } = useParams<{ id: string }>()
@@ -59,7 +59,7 @@ const JobDetail: React.FC = () => {
               }`}
               disabled={isExpired} // Disable the button if the job is expired
             >
-              Apply Now
+              Contact Us
             </button>
             <button
               onClick={() => navigate('/vacancies')}
@@ -93,14 +93,6 @@ const JobDetail: React.FC = () => {
           </div>
         </div>
       </div>
-
-      {isModalOpen && (
-        <ApplicationModal
-          jobTitle={job.title}
-          isOpen={isModalOpen}
-          onClose={() => setIsModalOpen(false)}
-        />
-      )}
     </div>
   )
 }

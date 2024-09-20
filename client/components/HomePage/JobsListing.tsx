@@ -1,18 +1,16 @@
 import React from 'react'
-import { jobListings } from '../JobsPage/Model'
+import { jobList } from '../JobsList/Models'
+import { Link } from 'react-router-dom'
 
 const JobBoardSection: React.FC = () => {
   // Function to sort jobs by date and get the latest three
-  const getLatestJobs = (jobs: typeof jobListings, count: number) => {
-    return jobs
-      .sort(
-        (a, b) =>
-          new Date(b.datePosted).getTime() - new Date(a.datePosted).getTime(),
-      )
-      .slice(0, count)
-  }
+  const sortedJobs = jobList.sort(
+    (a, b) =>
+      new Date(b.datePosted).getTime() - new Date(a.datePosted).getTime(),
+  )
 
-  const latestJobs = getLatestJobs(jobListings, 3)
+  // Get the three most recent jobs
+  const latestJobs = sortedJobs.slice(0, 3)
 
   return (
     <section className="relative bg-cyan-600 px-6 py-16 sm:px-12 lg:px-24">
@@ -29,7 +27,7 @@ const JobBoardSection: React.FC = () => {
               to advance your career.
             </p>
             <a
-              href="/more-jobs"
+              href="/vacancies"
               className="inline-block rounded-full bg-blue-600 px-8 py-3 text-white transition duration-300 hover:bg-blue-700"
             >
               View More Jobs
@@ -38,27 +36,28 @@ const JobBoardSection: React.FC = () => {
 
           {/* Second Div: Job Listings */}
           <div className="flex flex-col lg:w-2/3 lg:flex-row lg:space-x-8">
-            {latestJobs.map((job) => (
+            {latestJobs.map((Job) => (
               <div
-                key={job.id}
+                key={Job.id}
                 className="mb-8 flex flex-col items-center rounded-lg bg-white p-6 shadow-lg transition-shadow duration-300 hover:shadow-xl lg:mb-0 lg:w-1/3"
               >
                 <div className="mb-4 flex flex-col items-center">
-                  <img
-                    src={job.logo}
-                    alt={job.company}
-                    className="mb-4 h-20 w-20 rounded-full object-cover"
-                  />
                   <div className="text-center">
                     <h3 className="text-md font-semibold text-indigo-600">
-                      {job.title}
+                      {Job.title}
                     </h3>
                     <p className="text-sm text-gray-500">
-                      Posted: {job.datePosted}
+                      Posted: {Job.datePosted}
                     </p>
                   </div>
                 </div>
-                <p className="text-gray-700">{job.description}</p>
+                <p className="text-gray-700">{Job.description}</p>
+                <Link
+                  to={`/vacancies/${Job.id}`}
+                  className="rounded-lg bg-blue-500 px-6 py-2 text-white transition duration-300 hover:bg-blue-600"
+                >
+                  View Details
+                </Link>
               </div>
             ))}
           </div>

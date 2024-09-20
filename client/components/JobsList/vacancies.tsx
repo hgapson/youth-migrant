@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { FaMapMarkerAlt, FaBriefcase, FaClock } from 'react-icons/fa'
-import { Job, jobList } from './Model'
+import { Job, jobList } from './Models'
 
 const ITEMS_PER_PAGE = 9
 
