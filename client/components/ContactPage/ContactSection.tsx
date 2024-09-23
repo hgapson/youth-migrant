@@ -1,6 +1,5 @@
 import React from 'react'
 import { FaMapMarkerAlt, FaPhone, FaEnvelope } from 'react-icons/fa'
-import mapImage from '../public/map-location.png' // Replace with your map image
 
 const ContactSection: React.FC = () => {
   return (
@@ -38,13 +37,6 @@ const ContactSection: React.FC = () => {
       </div>
 
       {/* Image */}
-      <div className="mt-6 flex-1 md:mt-0">
-        <img
-          src={mapImage}
-          alt="Map Location"
-          className="h-64 w-full rounded-lg object-cover shadow-md"
-        />
-      </div>
     </section>
   )
 }

@@ -1,6 +1,6 @@
 import React from 'react'
 import mapImage from '../public/map-location.jpg' // Replace with your map image
-import contactImage from '../public/umbrella.jpg' // Replace with your contact image
+// import contactImage from '../public/umbrella.jpg' // Replace with your contact image
 
 const MapSection = () => {
   return (
@@ -39,13 +39,6 @@ const MapSection = () => {
       </div>
 
       {/* Image */}
-      <div className="text-center md:w-1/2">
-        <img
-          src={contactImage}
-          alt="Contact"
-          className="mx-auto h-64 w-64 rounded-full border-4 border-blue-500 object-cover"
-        />
-      </div>
     </section>
   )
 }

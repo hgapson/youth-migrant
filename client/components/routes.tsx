@@ -3,11 +3,11 @@
 import { createBrowserRouter, RouteObject } from 'react-router-dom'
 import Layout from './Layout'
 import Home from './HomePage/Home'
-//import Contact from './ContactPage/Contact'
+import Contact from './ContactPage/Contact'
 import EventsPage from './EventPage/AllEvents'
 import About from './About-us/About'
 // import OurPrograms from './Our-programs/OurPrograms'
-// import GetInvolved from './GetInvolved/GetInvolved'
+import JobSolutionsPage from './Why/JobSolutions'
 import Vacancies from './JobsList/vacancies'
 import JobDetail from './JobsList/JobDetail'
 import WhyWeHelp from './Why/WhyWeHelp'
@@ -19,11 +19,11 @@ const routes: RouteObject[] = [
     element: <Layout />,
     children: [
       { path: '', element: <Home /> },
-      // { path: 'contact', element: <Contact /> },
+      { path: 'contact', element: <Contact /> },
       { path: 'events', element: <EventsPage /> },
       { path: 'about-us', element: <About /> },
       // { path: 'our-programs', element: <OurPrograms /> },
-      // { path: 'get-involved', element: <GetInvolved /> },
+      { path: 'job-solution', element: <JobSolutionsPage /> },
       { path: 'vacancies', element: <Vacancies /> },
       { path: 'vacancies/:id', element: <JobDetail /> },
       { path: 'why-we-help', element: <WhyWeHelp /> },

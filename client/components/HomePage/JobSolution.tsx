@@ -1,6 +1,7 @@
 import React from 'react'
 import training from '../public/training.jpg'
 import cv from '../public/cv.jpg'
+import { Link } from 'react-router-dom'
 
 const JobSolutionsSection: React.FC = () => {
   return (
@@ -74,12 +75,12 @@ const JobSolutionsSection: React.FC = () => {
 
         {/* Explore More Button */}
         <div className="mt-12 text-center">
-          <a
-            href="/explore-more"
+          <Link
+            to="/job-solution"
             className="rounded-full bg-white px-8 py-3 text-lg font-semibold text-blue-600 shadow-lg transition-colors duration-300 hover:bg-gray-300"
           >
             Explore More Solutions
-          </a>
+          </Link>
         </div>
       </div>
 
