@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 
 function NavLinks() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -8,6 +10,10 @@ function NavLinks() {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen)
   }
+
+  useEffect(() => {
+    Aos.init({ duration: 800, once: true }) // Initialize AOS with your desired settings
+  }, [])
 
   useEffect(() => {
     const handleResize = () => {
@@ -50,22 +56,9 @@ function NavLinks() {
 
       {/* Mobile Menu */}
       {!isDesktop && isMenuOpen && (
-        <div
-          className={`absolute right-0 top-12 z-50 w-48 transform rounded-lg bg-sky-300 shadow-lg transition-all duration-500 ease-in-out ${
-            isMenuOpen
-              ? 'translate-y-0 opacity-100'
-              : '-translate-y-5 opacity-0'
-          }`}
-        >
+        <div className="absolute right-0 top-12 z-50 w-48 rounded-lg bg-sky-300 shadow-lg">
           <ul className="flex flex-col items-start space-y-2 px-2 py-4 text-sm">
-            <li
-              className={`transform transition-transform duration-700 ease-out ${
-                isMenuOpen
-                  ? 'translate-x-0 opacity-100'
-                  : 'translate-x-[-50px] opacity-0'
-              }`}
-              style={{ transitionDelay: '100ms' }} // Delay for first link
-            >
+            <li data-aos="fade-right" data-aos-delay="100">
               <Link
                 to="/"
                 className="font-semibold text-black hover:text-blue-800"
@@ -74,14 +67,7 @@ function NavLinks() {
                 Home
               </Link>
             </li>
-            <li
-              className={`transform transition-transform duration-700 ease-out ${
-                isMenuOpen
-                  ? 'translate-x-0 opacity-100'
-                  : 'translate-x-[-50px] opacity-0'
-              }`}
-              style={{ transitionDelay: '200ms' }} // Delay for second link
-            >
+            <li data-aos="fade-right" data-aos-delay="200">
               <Link
                 to="/about-us"
                 className="font-semibold text-black hover:text-blue-800"
@@ -90,14 +76,7 @@ function NavLinks() {
                 About Us
               </Link>
             </li>
-            <li
-              className={`transform transition-transform duration-700 ease-out ${
-                isMenuOpen
-                  ? 'translate-x-0 opacity-100'
-                  : 'translate-x-[-50px] opacity-0'
-              }`}
-              style={{ transitionDelay: '300ms' }} // Delay for third link
-            >
+            <li data-aos="fade-right" data-aos-delay="300">
               <Link
                 to="/our-programs"
                 className="font-semibold text-black hover:text-blue-800"
@@ -107,14 +86,7 @@ function NavLinks() {
               </Link>
             </li>
 
-            <li
-              className={`transform transition-transform duration-700 ease-out ${
-                isMenuOpen
-                  ? 'translate-x-0 opacity-100'
-                  : 'translate-x-[-50px] opacity-0'
-              }`}
-              style={{ transitionDelay: '400ms' }} // Delay for fourth link
-            >
+            <li data-aos="fade-right" data-aos-delay="400">
               <Link
                 to="/contact"
                 className="font-semibold text-black hover:text-blue-800"
