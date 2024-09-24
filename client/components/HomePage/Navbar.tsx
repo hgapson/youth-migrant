@@ -58,7 +58,14 @@ function NavLinks() {
           }`}
         >
           <ul className="flex flex-col items-start space-y-2 px-2 py-4 text-sm">
-            <li>
+            <li
+              className={`transform transition-transform duration-700 ease-out ${
+                isMenuOpen
+                  ? 'translate-x-0 opacity-100'
+                  : 'translate-x-[-50px] opacity-0'
+              }`}
+              style={{ transitionDelay: '100ms' }} // Delay for first link
+            >
               <Link
                 to="/"
                 className="font-semibold text-black hover:text-blue-800"
@@ -67,7 +74,14 @@ function NavLinks() {
                 Home
               </Link>
             </li>
-            <li>
+            <li
+              className={`transform transition-transform duration-700 ease-out ${
+                isMenuOpen
+                  ? 'translate-x-0 opacity-100'
+                  : 'translate-x-[-50px] opacity-0'
+              }`}
+              style={{ transitionDelay: '200ms' }} // Delay for second link
+            >
               <Link
                 to="/about-us"
                 className="font-semibold text-black hover:text-blue-800"
@@ -76,7 +90,14 @@ function NavLinks() {
                 About Us
               </Link>
             </li>
-            <li>
+            <li
+              className={`transform transition-transform duration-700 ease-out ${
+                isMenuOpen
+                  ? 'translate-x-0 opacity-100'
+                  : 'translate-x-[-50px] opacity-0'
+              }`}
+              style={{ transitionDelay: '300ms' }} // Delay for third link
+            >
               <Link
                 to="/our-programs"
                 className="font-semibold text-black hover:text-blue-800"
@@ -86,7 +107,14 @@ function NavLinks() {
               </Link>
             </li>
 
-            <li>
+            <li
+              className={`transform transition-transform duration-700 ease-out ${
+                isMenuOpen
+                  ? 'translate-x-0 opacity-100'
+                  : 'translate-x-[-50px] opacity-0'
+              }`}
+              style={{ transitionDelay: '400ms' }} // Delay for fourth link
+            >
               <Link
                 to="/contact"
                 className="font-semibold text-black hover:text-blue-800"
