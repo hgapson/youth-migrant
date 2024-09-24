@@ -1,14 +1,12 @@
 import React, { useRef, useState } from 'react'
 import emailjs from '@emailjs/browser'
 import { useForm, SubmitHandler } from 'react-hook-form'
-// import ReCAPTCHA from 'react-google-recaptcha'
 
 type FormValues = {
   name: string
   phoneNumber: string
   email: string
   message: string
-  captcha: string
 }
 
 const ContactForm: React.FC = () => {
@@ -34,7 +32,7 @@ const ContactForm: React.FC = () => {
         .then(
           () => {
             setSuccessMessage('Your message has been sent successfully!')
-            reset() // Reset the form
+            reset()
             setTimeout(() => {
               setSuccessMessage(null)
             }, 3000)
@@ -50,33 +48,35 @@ const ContactForm: React.FC = () => {
   }
 
   return (
-    <div className="contact-form-container mx-auto mt-16 max-w-md rounded-lg bg-blue-950 p-8 shadow-lg">
-      <p className="mb-6 text-center text-sm text-white underline">
-        GET IN TOUCH
+    <div className="contact-form-container mx-auto mt-16 max-w-lg rounded-lg  p-8 shadow-md lg:max-w-2xl">
+      <p className="mb-6 text-center text-sm uppercase tracking-widest text-gray-100">
+        Get In Touch
       </p>
-      <h2 className="mb-4 text-center text-2xl font-semibold text-white">
-        Give Us Your Query
+      <h2 className="mb-8 text-center text-3xl font-bold text-gray-800">
+        We are Here to Help!
       </h2>
 
       {successMessage && (
-        <div className="mb-4 text-center text-green-500">{successMessage}</div>
+        <div className="mb-4 text-center font-semibold text-green-600">
+          {successMessage}
+        </div>
       )}
 
-      <form ref={form} onSubmit={handleSubmit(sendEmail)} className="space-y-4">
+      <form ref={form} onSubmit={handleSubmit(sendEmail)} className="space-y-6">
         <div className="mb-4">
           <input
             {...register('name', { required: 'Name is required' })}
             type="text"
             name="name"
             placeholder="Your name"
-            className="w-full rounded border border-gray-600 bg-gray-800 p-2 text-white placeholder-gray-400"
+            className="w-full rounded-lg border border-gray-300 bg-gray-100 p-3 text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
           {errors.name && (
-            <p className="text-sm text-red-400">{errors.name.message}</p>
+            <p className="mt-2 text-sm text-red-500">{errors.name.message}</p>
           )}
         </div>
 
-        <div className="flex flex-col space-y-4 md:flex-row md:space-x-4 md:space-y-0">
+        <div className="flex flex-col space-y-6 md:flex-row md:space-x-4 md:space-y-0">
           <div className="flex-1">
             <input
               {...register('phoneNumber', {
@@ -84,11 +84,11 @@ const ContactForm: React.FC = () => {
               })}
               type="tel"
               name="phoneNumber"
-              placeholder="Your number"
-              className="w-full rounded border border-gray-600 bg-gray-800 p-2 text-white placeholder-gray-400"
+              placeholder="Your phone number"
+              className="w-full rounded-lg border border-gray-300 bg-gray-100 p-3 text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
             {errors.phoneNumber && (
-              <p className="text-sm text-red-400">
+              <p className="mt-2 text-sm text-red-500">
                 {errors.phoneNumber.message}
               </p>
             )}
@@ -100,10 +100,12 @@ const ContactForm: React.FC = () => {
               type="email"
               name="email"
               placeholder="Your email"
-              className="w-full rounded border border-gray-600 bg-gray-800 p-2 text-white placeholder-gray-400"
+              className="w-full rounded-lg border border-gray-300 bg-gray-100 p-3 text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
             {errors.email && (
-              <p className="text-sm text-red-400">{errors.email.message}</p>
+              <p className="mt-2 text-sm text-red-500">
+                {errors.email.message}
+              </p>
             )}
           </div>
         </div>
@@ -113,19 +115,20 @@ const ContactForm: React.FC = () => {
             {...register('message', { required: 'Message is required' })}
             name="message"
             placeholder="Your message"
-            className="w-full rounded border border-gray-600 bg-gray-800 p-2 text-white placeholder-gray-400"
+            className="w-full rounded-lg border border-gray-300 bg-gray-100 p-3 text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
           {errors.message && (
-            <p className="text-sm text-red-400">{errors.message.message}</p>
+            <p className="mt-2 text-sm text-red-500">
+              {errors.message.message}
+            </p>
           )}
         </div>
 
         <button
           type="submit"
-          value="send"
-          className="w-full rounded bg-blue-500 p-3 text-white hover:bg-blue-600"
+          className="w-full rounded-lg bg-blue-600 p-3 text-white hover:bg-blue-700 focus:outline-none focus:ring-4 focus:ring-blue-300"
         >
-          Send
+          Send Message
         </button>
       </form>
     </div>
