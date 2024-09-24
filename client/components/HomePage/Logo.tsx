@@ -7,7 +7,7 @@ function Logo() {
       <img
         src={logo}
         alt="Logo"
-        className="h-20 w-20 md:h-24 md:w-24 lg:h-28 lg:w-40"
+        className="h-24 w-40 object-contain md:h-28 md:w-48 lg:h-32 lg:w-56"
       />
     </div>
   )

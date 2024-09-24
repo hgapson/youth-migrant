@@ -24,7 +24,7 @@ function NavLinks() {
   }, [])
 
   return (
-    <nav className="relative flex items-center ">
+    <nav className="relative flex items-center">
       {/* Toggle Button for Mobile */}
       {!isDesktop && (
         <button
@@ -50,12 +50,18 @@ function NavLinks() {
 
       {/* Mobile Menu */}
       {!isDesktop && isMenuOpen && (
-        <div className="absolute right-0 top-12 z-50 w-48 rounded-lg bg-sky-300  shadow-lg">
+        <div
+          className={`absolute right-0 top-12 z-50 w-48 transform rounded-lg bg-sky-300 shadow-lg transition-all duration-500 ease-in-out ${
+            isMenuOpen
+              ? 'translate-y-0 opacity-100'
+              : '-translate-y-5 opacity-0'
+          }`}
+        >
           <ul className="flex flex-col items-start space-y-2 px-2 py-4 text-sm">
             <li>
               <Link
                 to="/"
-                className="font-semibold text-black hover:text-blue-500"
+                className="font-semibold text-black hover:text-blue-800"
                 onClick={toggleMenu}
               >
                 Home
@@ -64,7 +70,7 @@ function NavLinks() {
             <li>
               <Link
                 to="/about-us"
-                className="font-semibold text-black hover:text-blue-500"
+                className="font-semibold text-black hover:text-blue-800"
                 onClick={toggleMenu}
               >
                 About Us
@@ -73,7 +79,7 @@ function NavLinks() {
             <li>
               <Link
                 to="/our-programs"
-                className="font-semibold text-black hover:text-blue-500"
+                className="font-semibold text-black hover:text-blue-800"
                 onClick={toggleMenu}
               >
                 Our Programs
@@ -83,7 +89,7 @@ function NavLinks() {
             <li>
               <Link
                 to="/contact"
-                className="font-semibold text-black hover:text-blue-500"
+                className="font-semibold text-black hover:text-blue-800"
                 onClick={toggleMenu}
               >
                 Contact Us
@@ -96,25 +102,25 @@ function NavLinks() {
       {/* Desktop Menu */}
       {isDesktop && (
         <div className="ml-auto flex space-x-6 text-base">
-          <Link to="/" className="font-semibold text-black hover:text-blue-500">
+          <Link to="/" className="font-semibold text-black hover:text-blue-800">
             Home
           </Link>
           <Link
             to="/about-us"
-            className="font-semibold text-black hover:text-blue-500"
+            className="font-semibold text-black hover:text-blue-800"
           >
             About
           </Link>
           <Link
             to="/our-programs"
-            className="font-semibold text-black hover:text-blue-500"
+            className="font-semibold text-black hover:text-blue-800"
           >
             Programs
           </Link>
 
           <Link
             to="/contact"
-            className="font-semibold text-black hover:text-blue-500"
+            className="font-semibold text-black hover:text-blue-800"
           >
             Contact
           </Link>

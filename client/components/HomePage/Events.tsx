@@ -45,7 +45,7 @@ const Event = () => {
         <div className="mt-8 flex justify-center">
           <Link
             to="/Events"
-            className="btn rounded-lg bg-blue-500 p-3 text-white shadow-lg hover:bg-blue-600"
+            className="rounded-lg bg-blue-500 p-3 text-white shadow-lg hover:bg-blue-600"
           >
             View All Events
           </Link>

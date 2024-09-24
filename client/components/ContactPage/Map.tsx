@@ -7,7 +7,7 @@ const MapSection = () => {
     <section className="mt-16 flex flex-col-reverse items-center justify-between bg-gray-100 p-8 md:flex-row">
       {/* Text Content */}
       <div className="text-center md:w-1/2 md:text-left">
-        <h1 className="mb-4 px-20 text-4xl font-bold">Reach To Us </h1>
+        <h1 className="mb-4 px-20 text-4xl font-bold">Cont Us </h1>
         <p className="mb-6 text-gray-700">
           We had love to hear from you. Whether you have questions, feedback, or
           need assistance, feel free to reach out.
