@@ -11,6 +11,7 @@ import JobSolutionsPage from './Why/JobSolutions'
 import Vacancies from './JobsList/vacancies'
 import JobDetail from './JobsList/JobDetail'
 import WhyWeHelp from './Why/WhyWeHelp'
+import EventDetailPage from './EventPage/EventDetail'
 // import NewsPage from './News/NewsPage'
 
 const routes: RouteObject[] = [
@@ -27,7 +28,7 @@ const routes: RouteObject[] = [
       { path: 'vacancies', element: <Vacancies /> },
       { path: 'vacancies/:id', element: <JobDetail /> },
       { path: 'why-we-help', element: <WhyWeHelp /> },
-      // { path: 'news', element: <NewsPage /> },
+      { path: 'events/:id', element: <EventDetailPage /> },
     ],
   },
 ]

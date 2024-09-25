@@ -4,7 +4,8 @@ import { FaFlag, FaHandshake, FaBuilding } from 'react-icons/fa'
 import wrf from '../public/WRF logo.jpg'
 import migration from '../public/migration.png'
 import winz from '../public/winz.jpg'
-import settlement from '../public/settlement.jpg'
+import team1 from '../public/team1.jpg'
+import team2 from '../public/team2.jpg'
 export interface TeamMember {
   name: string
   position: string
@@ -24,13 +25,13 @@ export const teamData: TeamData = {
       name: 'John Doe',
       position: 'Chairman',
       description: 'John has over 20 years of experience in the industry.',
-      image: '/path/to/john_doe.jpg',
+      image: team1,
     },
     {
       name: 'Jane Smith',
       position: 'Vice Chairman',
       description: 'Jane specializes in strategic planning and management.',
-      image: '/path/to/jane_smith.jpg',
+      image: team2,
     },
     // Add more board members as needed
   ],

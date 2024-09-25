@@ -13,7 +13,6 @@ import MoreTestimoniesSection from './Testimonies'
 import OrganizationAwardsSection from './Awards'
 import OurPartnersSection from './Partners'
 import OurTeamSection from './Team'
-import ContactFormSection from './Contact'
 
 const About = () => {
   const location = useLocation()
@@ -66,7 +65,6 @@ const About = () => {
         <OrganizationAwardsSection />
         <OurPartnersSection />
         <OurTeamSection />
-        <ContactFormSection />
       </div>
     </main>
   )
