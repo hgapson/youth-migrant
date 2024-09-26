@@ -189,6 +189,38 @@ body {
 }
 
 
+@media (max-width: 640px) {
+  section {
+    height: 40vh; /* Reduce height for small screens */
+  }
 
+  .popup-message {
+    padding: 0.5rem; /* Adjust padding */
+  }
+
+  .popup-text {
+    font-size: 0.9rem; /* Adjust font size */
+  }
+}
+
+@media (min-width: 640px) {
+  section {
+    height: 50vh; /* Default height for larger screens */
+  }
+
+  .popup-text {
+    font-size: 1.25rem; /* Increase font size for larger screens */
+  }
+}
+
+@media (min-width: 768px) {
+  section {
+    height: 60vh; /* Further increase height for medium screens */
+  }
+
+  .popup-text {
+    font-size: 1.5rem; /* Further increase font size */
+  }
+}
 
 

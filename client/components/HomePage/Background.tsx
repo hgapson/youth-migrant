@@ -20,7 +20,11 @@ const Background: React.FC = () => {
     <div className="mt-16">
       <section
         className="relative flex items-center justify-center bg-cover bg-center"
-        style={{ height: '65vh', backgroundImage: `url(${cover})` }}
+        style={{
+          backgroundImage: `url(${cover})`,
+          height: '50npm run devvh', // Use viewport height for responsiveness
+          minHeight: '300px', // Set a minimum height for small screens
+        }}
       >
         {showPopup && (
           <button
