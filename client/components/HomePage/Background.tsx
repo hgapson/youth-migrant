@@ -19,15 +19,13 @@ const Background: React.FC = () => {
   return (
     <div className="mt-16">
       <section
-        className="relative flex items-center justify-center bg-cover bg-center"
+        className="relative flex w-full items-center justify-center overflow-hidden bg-cover bg-center"
         style={{
           backgroundImage: `url(${cover})`,
         }}
       >
-        {/* Set responsive height using Tailwind utility classes */}
-        <div className="h-64 w-full md:h-80 lg:h-96 xl:h-[65vh] 2xl:h-[65vh]">
-          {' '}
-          {/* Adjust as needed */}
+        {/* Responsive Height */}
+        <div className="h-64 w-full md:h-80 lg:h-96 xl:h-[40vh] 2xl:h-[65vh]">
           {showPopup && (
             <button
               className="popup-message absolute left-1/2 top-10 z-10 flex -translate-x-1/2 transform items-center rounded-lg bg-white p-4 shadow-lg"
