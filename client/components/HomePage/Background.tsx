@@ -22,22 +22,25 @@ const Background: React.FC = () => {
         className="relative flex items-center justify-center bg-cover bg-center"
         style={{
           backgroundImage: `url(${cover})`,
-          height: '50npm run devvh', // Use viewport height for responsiveness
-          minHeight: '300px', // Set a minimum height for small screens
         }}
       >
-        {showPopup && (
-          <button
-            className="popup-message"
-            onClick={handlePopupClick}
-            aria-label="Close notification"
-          >
-            <div className="popup-content">
-              <AiOutlineWarning className="popup-icon" />
-              <span className="popup-text">Our Services are Free!</span>
-            </div>
-          </button>
-        )}
+        {/* Set responsive height using Tailwind utility classes */}
+        <div className="h-64 w-full md:h-80 lg:h-96 xl:h-[65vh] 2xl:h-[65vh]">
+          {' '}
+          {/* Adjust as needed */}
+          {showPopup && (
+            <button
+              className="popup-message absolute left-1/2 top-10 z-10 flex -translate-x-1/2 transform items-center rounded-lg bg-white p-4 shadow-lg"
+              onClick={handlePopupClick}
+              aria-label="Close notification"
+            >
+              <AiOutlineWarning className="popup-icon text-yellow-600" />
+              <span className="popup-text ml-2 text-sm md:text-lg">
+                Our Services are Free!
+              </span>
+            </button>
+          )}
+        </div>
       </section>
     </div>
   )
