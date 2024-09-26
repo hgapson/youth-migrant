@@ -32,12 +32,6 @@ const FancySection: React.FC = () => {
               use their talents and skills to contribute to their host countries
               and to the world.
             </p>
-            <a
-              href="https://wrf-wine.vercel.app/"
-              className="inline-block rounded bg-white px-6 py-3 font-semibold text-blue-500 shadow-md transition-colors duration-300 hover:bg-gray-100"
-            >
-              Read More
-            </a>
           </div>
         </div>
       </div>

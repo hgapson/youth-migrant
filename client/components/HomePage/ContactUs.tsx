@@ -31,7 +31,7 @@ const ContactUsSection: React.FC = () => {
         </p>
 
         <Link
-          to="/testimonials"
+          to="/contact"
           className="relative z-10 inline-block rounded-full bg-indigo-600 px-8 py-3 text-lg font-semibold text-white shadow-lg transition duration-300 hover:bg-indigo-700"
         >
           Contact Us

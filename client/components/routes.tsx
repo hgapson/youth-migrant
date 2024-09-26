@@ -9,7 +9,7 @@ import About from './About-us/About'
 // import OurPrograms from './Our-programs/OurPrograms'
 import JobSolutionsPage from './Why/JobSolutions'
 import Vacancies from './JobsList/vacancies'
-import JobDetail from './JobsList/JobDetail'
+// import JobDetail from './JobsList/JobDetail'
 import WhyWeHelp from './Why/WhyWeHelp'
 import EventDetailPage from './EventPage/EventDetail'
 // import NewsPage from './News/NewsPage'
@@ -26,7 +26,7 @@ const routes: RouteObject[] = [
       // { path: 'our-programs', element: <OurPrograms /> },
       { path: 'job-solution', element: <JobSolutionsPage /> },
       { path: 'vacancies', element: <Vacancies /> },
-      { path: 'vacancies/:id', element: <JobDetail /> },
+      // { path: 'vacancies/:id', element: <JobDetail /> },
       { path: 'why-we-help', element: <WhyWeHelp /> },
       { path: 'events/:id', element: <EventDetailPage /> },
     ],

@@ -142,6 +142,51 @@ body {
 }
 
 
+.popup-message {
+  position: absolute; /* Position it absolutely within the section */
+  top: 80%; /* Adjust to position it */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  animation: dance 1s infinite; /* Add dancing animation */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  z-index: 10; /* Ensure it appears above other elements */
+}
+
+.popup-content {
+  display: flex;
+  align-items: center; /* Center items vertically */
+}
+
+.popup-icon {
+  width: 30px; /* Adjust size of the icon */
+  height: 30px; /* Adjust size of the icon */
+  margin-right: 8px; /* Space between icon and text */
+  color: #ff9800; /* Change color to suit your design */
+  font-size: 1.5rem; /* Adjust size of the icon */
+}
+
+
+.popup-text {
+  font-size: 1.2rem; /* Adjust text size */
+  font-weight: bold; /* Make the text bold */
+  color: #333; /* Text color */
+}
+
+/* Keyframes for dancing animation */
+@keyframes dance {
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  25% { transform: translate(-50%, -50%) rotate(5deg); }
+  50% { transform: translate(-50%, -50%) rotate(-5deg); }
+  75% { transform: translate(-50%, -50%) rotate(5deg); }
+  100% { transform: translate(-50%, -50%) rotate(0deg); }
+}
+.h-screen {
+  height: 65vh; /* Make sure this class is included to take full height */
+}
 
 
 

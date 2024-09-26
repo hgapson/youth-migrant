@@ -5,7 +5,7 @@ import AOS from 'aos'
 import 'aos/dist/aos.css'
 import { useLocation } from 'react-router-dom'
 import { Link } from 'react-router-dom'
-import BackgroundSection from './Background'
+// import BackgroundSection from './Background'
 import MissionVisionSection from './Vision'
 import OrganizationStoriesSection from './History'
 import CoreValuesSection from './Values'
@@ -57,8 +57,10 @@ const About = () => {
   return (
     <main className="main-container bg-cyan-600">
       <div>
-        <BackgroundSection />
-        <MissionVisionSection />
+        <div className="py-16">
+          <MissionVisionSection />
+        </div>
+
         <OrganizationStoriesSection />
         <CoreValuesSection />
         <MoreTestimoniesSection />

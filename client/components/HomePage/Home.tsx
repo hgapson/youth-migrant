@@ -9,6 +9,7 @@ import '../main.scss'
 // import ImageCardSection from './Partners'
 import TestimonialsSection from './Testimonial'
 import ContactUsSection from './ContactUs'
+import RecruiterSection from './RecruiterSection'
 //import News from './News'
 
 const Home = () => {
@@ -32,6 +33,9 @@ const Home = () => {
       </div>
       <div className="jobListing">
         <JobListing />
+      </div>
+      <div>
+        <RecruiterSection />
       </div>
       <div className="testimonies">
         <TestimonialsSection />

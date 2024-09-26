@@ -1,6 +1,6 @@
 import React from 'react'
 import { jobList } from '../JobsList/Models'
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 
 const JobBoardSection: React.FC = () => {
   // Function to sort jobs by date and get the latest three
@@ -52,12 +52,6 @@ const JobBoardSection: React.FC = () => {
                   </div>
                 </div>
                 <p className="text-gray-700">{Job.description}</p>
-                <Link
-                  to={`/vacancies/${Job.id}`}
-                  className="rounded-lg bg-blue-500 px-6 py-2 text-white transition duration-300 hover:bg-blue-600"
-                >
-                  View Details
-                </Link>
               </div>
             ))}
           </div>

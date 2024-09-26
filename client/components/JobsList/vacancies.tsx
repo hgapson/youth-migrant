@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
 import { FaMapMarkerAlt, FaBriefcase, FaClock } from 'react-icons/fa'
 import { Job, jobList } from './Models'
 
@@ -29,7 +28,7 @@ const Vacancies: React.FC = () => {
   }
 
   return (
-    <div className="mt-10 min-h-screen bg-blue-950 py-12">
+    <div className="mt-10 min-h-screen bg-cyan-600 py-12">
       <div className="container mx-auto px-4">
         <h1 className="mb-8 text-center text-4xl font-bold text-white">
           All Vacancies
@@ -71,15 +70,6 @@ const Vacancies: React.FC = () => {
                 {isExpired && (
                   <p className="mb-4 text-red-500">This job has expired.</p>
                 )}
-                <Link
-                  to={`/vacancies/${job.id}`}
-                  className={`mt-4 block rounded-lg text-center ${
-                    isExpired ? 'bg-gray-400' : 'bg-blue-500'
-                  } px-4 py-2 text-white transition duration-300 hover:bg-blue-600`}
-                  aria-disabled={isExpired}
-                >
-                  {isExpired ? 'View Details' : 'View Details'}
-                </Link>
               </div>
             )
           })}

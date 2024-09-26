@@ -12,7 +12,7 @@ const MissionVisionSection: React.FC = () => {
   }, [])
 
   return (
-    <section className="from-to-cyan-600 bg-gradient-to-br to-gray-300 py-16 text-center">
+    <section className="from-to-cyan-600 bg-gradient-to-br to-gray-300 py-14 text-center">
       <div className="relative z-10 mx-auto max-w-7xl px-6">
         <h2
           className="mb-12 text-4xl font-extrabold text-gray-800"
