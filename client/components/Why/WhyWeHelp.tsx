@@ -1,99 +1,13 @@
-import React, { useEffect, useRef } from 'react'
-import Chart from 'chart.js/auto'
-import Aos from 'aos'
 import 'aos/dist/aos.css'
+import { Link } from 'react-router-dom'
 import enjoy from '../public/working.jpg'
 import person1 from '../public/pesonInjoying1.jpg'
 import person2 from '../public/enjoying2.jpg'
 import person3 from '../public/enjoy3.jpg'
 
 const MoreAboutSupport = () => {
-  const chartRef = useRef<Chart | null>(null)
-
-  useEffect(() => {
-    Aos.init({ duration: 1000 })
-
-    const chartElement = document.getElementById(
-      'employmentChart',
-    ) as HTMLCanvasElement
-
-    if (chartElement) {
-      // Destroy the existing chart instance if it exists
-      if (chartRef.current) {
-        chartRef.current.destroy()
-      }
-
-      const ctx = chartElement.getContext('2d')
-      if (ctx) {
-        // Create a new chart instance
-        chartRef.current = new Chart(ctx, {
-          type: 'bar',
-          data: {
-            labels: ['2019', '2020', '2021', '2022', '2023'],
-            datasets: [
-              {
-                label: 'Refugees Employed',
-                data: [50, 65, 70, 85, 90],
-                backgroundColor: 'rgba(54, 162, 235, 0.6)',
-                borderColor: 'rgba(54, 162, 235, 1)',
-                borderWidth: 2,
-              },
-              {
-                label: 'Employer Satisfaction (%)',
-                data: [60, 70, 75, 80, 85],
-                backgroundColor: 'rgba(75, 192, 192, 0.6)',
-                borderColor: 'rgba(75, 192, 192, 1)',
-                borderWidth: 2,
-              },
-            ],
-          },
-          options: {
-            responsive: true,
-            plugins: {
-              legend: {
-                position: 'top',
-              },
-              tooltip: {
-                callbacks: {
-                  label: function (tooltipItem) {
-                    return (
-                      tooltipItem.dataset.label + ': ' + tooltipItem.raw + '%'
-                    )
-                  },
-                },
-              },
-            },
-            scales: {
-              y: {
-                beginAtZero: true,
-                max: 100,
-                title: {
-                  display: true,
-                  text: 'Percentage',
-                },
-              },
-              x: {
-                title: {
-                  display: true,
-                  text: 'Year',
-                },
-              },
-            },
-          },
-        })
-      }
-    }
-
-    return () => {
-      // Clean up and destroy the chart when the component unmounts
-      if (chartRef.current) {
-        chartRef.current.destroy()
-      }
-    }
-  }, [])
-
   return (
-    <section className="bg-cyan-600 py-16 text-gray-800">
+    <section className="mt-8 bg-cyan-600 py-16 text-gray-800">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main Title */}
         <div className="mb-12 text-center">
@@ -131,17 +45,6 @@ const MoreAboutSupport = () => {
         </div>
 
         {/* Chart Section */}
-        <div className="mt-16 ">
-          <h3 className="mb-8 text-center text-3xl font-semibold">
-            Employment Growth Over the Years
-          </h3>
-          <canvas
-            id="employmentChart"
-            width="400"
-            height="200"
-            className="mx-auto"
-          ></canvas>
-        </div>
 
         {/* Success Stories Section */}
         <div className="mt-16">
@@ -234,12 +137,14 @@ const MoreAboutSupport = () => {
 
         {/* Call to Action */}
         <div className="mt-16 text-center">
-          <button
-            className="rounded-full bg-blue-600 px-8 py-3 text-lg font-semibold text-white shadow-lg transition-colors duration-300 hover:bg-blue-700"
-            data-aos="fade-up"
-          >
-            Get Involved with Our Mission
-          </button>
+          <Link to="/contact">
+            <button
+              className="rounded-full bg-blue-600 px-8 py-3 text-lg font-semibold text-white shadow-lg transition-colors duration-300 hover:bg-blue-700"
+              data-aos="fade-up"
+            >
+              Contact Us to get Involved
+            </button>
+          </Link>
         </div>
       </div>
     </section>
