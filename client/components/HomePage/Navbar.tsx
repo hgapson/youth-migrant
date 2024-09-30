@@ -76,15 +76,6 @@ function NavLinks() {
                 About Us
               </Link>
             </li>
-            <li data-aos="fade-right" data-aos-delay="300">
-              <Link
-                to="/our-programs"
-                className="font-semibold text-black hover:text-blue-800"
-                onClick={toggleMenu}
-              >
-                Our Programs
-              </Link>
-            </li>
 
             <li data-aos="fade-right" data-aos-delay="400">
               <Link
@@ -110,12 +101,6 @@ function NavLinks() {
             className="font-semibold text-black hover:text-blue-800"
           >
             About
-          </Link>
-          <Link
-            to="/our-programs"
-            className="font-semibold text-black hover:text-blue-800"
-          >
-            Programs
           </Link>
 
           <Link

@@ -1,6 +1,53 @@
 import React from 'react'
+import { useRef, useState } from 'react'
+import emailjs from '@emailjs/browser'
+import { useForm, SubmitHandler } from 'react-hook-form'
+
+type FormValues = {
+  name: string
+  organization: string
+  phone: string
+  email: string
+  message: string
+}
 
 const RecruiterSection: React.FC = () => {
+  const form = useRef<HTMLFormElement>(null)
+  const [successMessage, setSuccessMessage] = useState<string | null>(null)
+
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    reset,
+  } = useForm<FormValues>()
+
+  const sendEmail: SubmitHandler<FormValues> = (data) => {
+    if (form.current) {
+      emailjs
+        .sendForm(
+          'service_huukdph',
+          'template_p934xyh',
+          form.current,
+          '_AfuqjrcWWBEbnsoh',
+        )
+        .then(
+          () => {
+            setSuccessMessage('Your message has been sent successfully!')
+            reset()
+            setTimeout(() => {
+              setSuccessMessage(null)
+            }, 3000)
+          },
+          (error) => {
+            console.log('FAILED...', error.text)
+          },
+        )
+        .catch((error) => {
+          console.error('Error sending email:', error)
+        })
+    }
+  }
   return (
     <section className="bg-cyan-600  py-10 text-white">
       <div className="container mx-auto px-4">
@@ -13,66 +60,82 @@ const RecruiterSection: React.FC = () => {
         </p>
 
         <div className="flex justify-center bg-gray-200 py-8">
-          <form className="w-full max-w-xl rounded-lg bg-white p-6 shadow-md">
+          {successMessage && (
+            <div className="mb-4 text-center font-semibold text-green-600">
+              {successMessage}
+            </div>
+          )}
+          <form
+            ref={form}
+            onSubmit={handleSubmit(sendEmail)}
+            className="w-full max-w-xl rounded-lg bg-white p-6 shadow-md"
+          >
             <h2 className="mb-4 text-center text-2xl font-semibold">
               Submit Your Job Listings
             </h2>
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
               <div className="flex flex-col">
-                <label
-                  htmlFor="name"
-                  className="text-sm font-medium text-gray-700"
-                >
-                  Your Name
-                </label>
                 <input
+                  {...register('name', { required: 'Name is required' })}
                   type="text"
-                  id="name"
-                  className="mt-1 rounded-md border p-2 text-sm"
+                  name="name"
+                  className="mt-1 rounded-md border p-2 text-sm text-gray-700"
                   placeholder="Enter your name"
                 />
+                {errors.name && (
+                  <p className="mt-2 text-sm text-red-500">
+                    {errors.name.message}
+                  </p>
+                )}
               </div>
+
               <div className="flex flex-col">
-                <label
-                  htmlFor="organization"
-                  className="text-sm font-medium text-gray-700"
-                >
-                  Organization
-                </label>
                 <input
+                  {...register('organization', {
+                    required: 'organization name is required',
+                  })}
                   type="text"
-                  id="organization"
-                  className="mt-1 rounded-md border p-2 text-sm"
+                  name="organization"
+                  className="mt-1 rounded-md border p-2 text-sm text-gray-700"
                   placeholder="Organization"
                 />
+                {errors.name && (
+                  <p className="mt-2 text-sm text-red-500">
+                    {errors.name.message}
+                  </p>
+                )}
               </div>
+
               <div className="flex flex-col">
-                <label
-                  htmlFor="phone"
-                  className="text-sm font-medium text-gray-700"
-                >
-                  Phone
-                </label>
                 <input
+                  {...register('phone', {
+                    required: 'organization name is required',
+                  })}
                   type="tel"
-                  id="phone"
-                  className="mt-1 rounded-md border p-2 text-sm"
+                  name="phone"
+                  className="mt-1 rounded-md border p-2 text-sm text-gray-700"
                   placeholder="Phone Number"
                 />
+                {errors.name && (
+                  <p className="mt-2 text-sm text-red-500">
+                    {errors.name.message}
+                  </p>
+                )}
               </div>
+
               <div className="flex flex-col">
-                <label
-                  htmlFor="email"
-                  className="text-sm font-medium text-gray-700"
-                >
-                  Email
-                </label>
                 <input
+                  {...register('email', { required: 'Email is required' })}
                   type="email"
-                  id="email"
-                  className="mt-1 rounded-md border p-2 text-sm"
+                  name="email"
+                  className="mt-1 rounded-md border p-2 text-sm text-gray-700"
                   placeholder="Email Address"
                 />
+                {errors.phone && (
+                  <p className="mt-2 text-sm text-red-500">
+                    {errors.phone.message}
+                  </p>
+                )}
               </div>
             </div>
             <button
