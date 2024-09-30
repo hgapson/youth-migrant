@@ -25,7 +25,7 @@ const Background: React.FC = () => {
         }}
       >
         {/* Responsive Height */}
-        <div className="h-64 w-full md:h-80 lg:h-96 xl:h-[40vh] 2xl:h-[65vh]">
+        <div className="h-64 w-full md:h-80 lg:h-96 xl:h-[65vh] 2xl:h-[65vh]">
           {showPopup && (
             <button
               className="popup-message absolute left-1/2 top-10 z-10 flex -translate-x-1/2 transform items-center rounded-lg bg-white p-4 shadow-lg"
