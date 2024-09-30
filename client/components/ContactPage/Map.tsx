@@ -22,20 +22,6 @@ const MapSection = () => {
           <h3 className="text-xl font-semibold">Working Hours</h3>
           <p className="italic text-gray-600">Monday - Friday: 9 AM - 5 PM</p>
         </div>
-        <div className="mb-8">
-          <h3 className="text-xl font-semibold">Get in Touch</h3>
-          <p className="text-gray-600">
-            Feel free to contact us via email or phone.
-          </p>
-        </div>
-        <a
-          href="https://maps.google.com/?q=46G+Boundary road+Claudelands,+Hamilton"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-block rounded-lg bg-blue-500 px-6 py-3 text-white transition-colors duration-300 hover:bg-blue-600"
-        >
-          View on Map
-        </a>
       </div>
 
       {/* Image */}

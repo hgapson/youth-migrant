@@ -48,10 +48,7 @@ const ContactForm: React.FC = () => {
   }
 
   return (
-    <div className="contact-form-container mx-auto mt-16 max-w-lg rounded-lg  p-8 shadow-md lg:max-w-2xl">
-      <p className="mb-6 text-center text-sm uppercase tracking-widest text-gray-100">
-        Get In Touch
-      </p>
+    <div className="contact-form-container mx-auto max-w-lg rounded-lg  p-8 shadow-md lg:max-w-2xl">
       <h2 className="mb-8 text-center text-3xl font-bold text-gray-800">
         We are Here to Help!
       </h2>
