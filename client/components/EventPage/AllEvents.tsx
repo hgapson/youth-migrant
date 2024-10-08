@@ -6,7 +6,7 @@ const EventsPage: React.FC = () => {
   return (
     <section className="mt-10 bg-cyan-600  px-4 py-16 sm:px-6 lg:px-8">
       <div className="container mx-auto pt-[64px]">
-        <h2 className="mb-6 text-center text-3xl font-bold">Upcoming Events</h2>
+        <h2 className="mb-6 text-center text-3xl font-bold">Our Programs</h2>
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           {eventsData.map((event) => (
             <div

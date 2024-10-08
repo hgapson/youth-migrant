@@ -88,16 +88,6 @@ const Reason = () => {
         </div>
 
         {/* Call to Action */}
-        <div className="mt-16">
-          <Link to="/why-we-help">
-            <button
-              className="rounded-full bg-white px-8 py-3 text-lg font-semibold text-blue-600 shadow-lg transition-colors duration-300 hover:bg-gray-300"
-              data-aos="fade-up"
-            >
-              Learn More
-            </button>
-          </Link>
-        </div>
       </div>
     </section>
   )

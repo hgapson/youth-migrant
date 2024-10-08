@@ -15,7 +15,7 @@ const Event = () => {
   return (
     <section className="relative  bg-sky-300 px-4 py-12 md:px-8 lg:px-16">
       <div className="relative z-10 mx-auto max-w-7xl text-center">
-        <h2 className="mb-8 text-4xl font-bold text-black">UPCOMING EVENTS</h2>
+        <h2 className="mb-8 text-4xl font-bold text-black">OUR PROGRAMS</h2>
         <div>
           {latestEvent.map((event) => (
             <div key={event.id} className="p-4">
@@ -47,7 +47,7 @@ const Event = () => {
             to="/Events"
             className="rounded-lg bg-blue-500 p-3 text-white shadow-lg hover:bg-blue-600"
           >
-            View All Events
+            View All Programs
           </Link>
         </div>
       </div>

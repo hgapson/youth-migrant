@@ -4,7 +4,7 @@ import mapImage from '../public/map-location.jpg' // Replace with your map image
 
 const MapSection = () => {
   return (
-    <section className="mt-16 flex flex-col-reverse items-center justify-between bg-gray-100 p-8 md:flex-row">
+    <section className="mt-18 flex flex-col-reverse items-center justify-between bg-gray-100 p-8 md:flex-row">
       {/* Text Content */}
       <div className="text-center md:w-1/2 md:text-left">
         <h1 className="mb-4 px-20 text-4xl font-bold">Contact Us </h1>

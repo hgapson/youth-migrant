@@ -69,40 +69,6 @@ const Team: React.FC = () => {
                 <p className="mb-4 text-sm text-gray-700">
                   {member.description}
                 </p>
-                <div className="flex justify-center gap-4">
-                  <a
-                    href={socialUrls.facebook}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-blue-600 hover:text-blue-800"
-                  >
-                    <FaFacebookF />
-                  </a>
-                  <a
-                    href={socialUrls.twitter}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-blue-400 hover:text-blue-600"
-                  >
-                    <FaTwitter />
-                  </a>
-                  <a
-                    href={socialUrls.instagram}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-pink-600 hover:text-pink-800"
-                  >
-                    <FaInstagram />
-                  </a>
-                  <a
-                    href={socialUrls.linkedin}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-blue-700 hover:text-blue-900"
-                  >
-                    <FaLinkedinIn />
-                  </a>
-                </div>
               </div>
             </div>
           )

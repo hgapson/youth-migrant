@@ -12,7 +12,7 @@ const EventDetailPage: React.FC = () => {
   }
 
   return (
-    <div className="mx-auto mt-10 max-w-4xl p-8 ">
+    <div className="mx-auto mt-16 max-w-4xl p-8 ">
       <h1 className="text-3xl font-bold">{event.title}</h1>
       <img
         src={event.image}

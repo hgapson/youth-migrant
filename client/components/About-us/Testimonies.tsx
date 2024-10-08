@@ -26,15 +26,6 @@ const MoreTestimoniesSection: React.FC = () => {
     }, 300) // Matches the duration of the fade-out animation
   }
 
-  // Automatically slide testimonies every 5 seconds
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      nextTestimony()
-    }, 5000)
-
-    return () => clearInterval(intervalId)
-  })
-
   useEffect(() => {
     setAnimationClass('fade-in')
   }, [currentIndex])
