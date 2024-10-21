@@ -25,16 +25,17 @@ const Background: React.FC = () => {
         }}
       >
         {/* Responsive Height */}
-        <div className="h-64 w-full md:h-80 lg:h-96 xl:h-[65vh] 2xl:h-[65vh]">
+        <div className="xsm:h-64 h-64 w-full sm:h-72 md:h-80 lg:h-96 xl:h-[60vh] 2xl:h-[65vh]">
+          {/* Popup message */}
           {showPopup && (
             <button
-              className="popup-message absolute left-1/2 top-10 z-10 flex -translate-x-1/2 transform items-center rounded-lg bg-white p-4 shadow-lg"
+              className="popup-message absolute left-1/2 top-10 z-10 flex -translate-x-1/2 transform items-center rounded-lg bg-white p-3 shadow-lg sm:p-4 md:p-5 lg:p-6"
               onClick={handlePopupClick}
               aria-label="Close notification"
             >
-              <AiOutlineWarning className="popup-icon text-yellow-600" />
-              <span className="popup-text ml-2 text-sm md:text-lg">
-                Our Services are Free!
+              <AiOutlineWarning className="popup-icon text-xl text-yellow-600 sm:text-2xl lg:text-3xl" />
+              <span className="popup-text ml-2 text-xs sm:text-sm md:text-lg lg:text-xl">
+                Free !
               </span>
             </button>
           )}
