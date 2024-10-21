@@ -143,37 +143,37 @@ body {
 
 
 .popup-message {
-  position: absolute; /* Position it absolutely within the section */
-  top: 80%; /* Adjust to position it */
+  position: absolute;
+  top: 80%;
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 1rem;
-  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+  background-color: rgba(255, 255, 255, 0.8);
   border-radius: 8px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-  animation: dance 1s infinite; /* Add dancing animation */
-  cursor: pointer; /* Change cursor to pointer on hover */
-  z-index: 10; /* Ensure it appears above other elements */
+  animation: dance 1s infinite;
+  cursor: pointer;
+  z-index: 10;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .popup-content {
   display: flex;
-  align-items: center; /* Center items vertically */
+  align-items: center;
 }
 
 .popup-icon {
-  width: 30px; /* Adjust size of the icon */
-  height: 30px; /* Adjust size of the icon */
-  margin-right: 8px; /* Space between icon and text */
-  color: #ff9800; /* Change color to suit your design */
-  font-size: 1.5rem; /* Adjust size of the icon */
+  width: 30px;
+  height: 30px;
+  margin-right: 8px;
+  color: #ff9800;
+  font-size: 1.5rem;
 }
 
-
 .popup-text {
-  font-size: 1.2rem; /* Adjust text size */
-  font-weight: bold; /* Make the text bold */
-  color: #333; /* Text color */
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
 }
 
 /* Keyframes for dancing animation */
@@ -184,9 +184,47 @@ body {
   75% { transform: translate(-50%, -50%) rotate(5deg); }
   100% { transform: translate(-50%, -50%) rotate(0deg); }
 }
-.h-screen {
-  height: 65vh; /* Make sure this class is included to take full height */
+
+/* Media query for screens under 640px */
+@media (max-width: 639px) {
+  .popup-message {
+    padding: 0.5rem; /* Reduce padding */
+    top: 80%; /* Adjust the position on small screens */
+    width: 35%; /* Make the popup width fit better */
+    font-size: 0.875rem; /* Smaller text */
+  }
+
+  .popup-icon {
+    width: 20px; /* Adjust icon size */
+    height: 20px;
+    font-size: 1.25rem;
+  }
+
+  .popup-text {
+    font-size: 1rem; /* Adjust text size */
+  }
 }
+
+/* Media query for larger screens (min-width: 640px) */
+@media (min-width: 640px) {
+  .popup-message {
+    padding: 1.25rem;
+    top: 85%; /* Adjust to default position */
+    font-size: 1rem; /* Normal text size */
+    width: 35%;
+  }
+
+  .popup-icon {
+    width: 30px;
+    height: 30px;
+    font-size: 1.5rem; /* Default icon size */
+  }
+
+  .popup-text {
+    font-size: 1.2rem; /* Default text size */
+  }
+}
+
 /* main.scss */
 
 /* Base styles for the background section */
@@ -201,23 +239,23 @@ body {
   width: 100%;
 
   /* Default height for small screens */
-  height: 16rem; /* 256px */
+  height: 10rem; /* 256px */
 }
 
 /* Responsive media queries */
 @media (min-width: 600px) {
   .background-section {
-    height: 10rem; /* 288px */
+    height: 8rem; /* 288px */
   }
 }
 @media (min-width: 620px) {
   .background-section {
-    height: 12rem; /* 288px */
+    height: 10rem; /* 288px */
   }
 }
 @media (min-width: 640px) {
   .background-section {
-    height: 14rem; /* 288px */
+    height: 12rem; /* 288px */
   }
 }
 
