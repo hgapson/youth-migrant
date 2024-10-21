@@ -187,6 +187,63 @@ body {
 .h-screen {
   height: 65vh; /* Make sure this class is included to take full height */
 }
+/* main.scss */
+
+/* Base styles for the background section */
+.background-section {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+
+  /* Default height for small screens */
+  height: 16rem; /* 256px */
+}
+
+/* Responsive media queries */
+@media (min-width: 600px) {
+  .background-section {
+    height: 10rem; /* 288px */
+  }
+}
+@media (min-width: 620px) {
+  .background-section {
+    height: 12rem; /* 288px */
+  }
+}
+@media (min-width: 640px) {
+  .background-section {
+    height: 14rem; /* 288px */
+  }
+}
+
+@media (min-width: 768px) {
+  .background-section {
+    height: 18rem; /* 320px */
+  }
+}
+
+@media (min-width: 1024px) {
+  .background-section {
+    height: 24rem; /* 384px */
+  }
+}
+
+@media (min-width: 1280px) {
+  .background-section {
+    height: 60vh;
+  }
+}
+
+@media (min-width: 1536px) {
+  .background-section {
+    height: 65vh;
+  }
+}
 
 
 

@@ -19,24 +19,21 @@ const Background: React.FC = () => {
   return (
     <div className="mt-16">
       <section
-        className="relative flex w-full items-center justify-center overflow-hidden bg-cover bg-center"
+        className="background-section"
         style={{
           backgroundImage: `url(${cover})`,
         }}
       >
-        {/* Responsive Height */}
-        <div className="xsm:h-64 h-64 w-full sm:h-72 md:h-80 lg:h-96 xl:h-[60vh] 2xl:h-[65vh]">
-          {/* Popup message */}
+        {/* Content */}
+        <div className="w-full">
           {showPopup && (
             <button
-              className="popup-message absolute left-1/2 top-10 z-10 flex -translate-x-1/2 transform items-center rounded-lg bg-white p-3 shadow-lg sm:p-4 md:p-5 lg:p-6"
+              className="popup-message"
               onClick={handlePopupClick}
               aria-label="Close notification"
             >
-              <AiOutlineWarning className="popup-icon text-xl text-yellow-600 sm:text-2xl lg:text-3xl" />
-              <span className="popup-text ml-2 text-xs sm:text-sm md:text-lg lg:text-xl">
-                Free !
-              </span>
+              <AiOutlineWarning className="popup-icon" />
+              <span className="popup-text">Our Services are Free!</span>
             </button>
           )}
         </div>
