@@ -32,10 +32,7 @@ const ContactForm: React.FC = () => {
         .then(
           () => {
             setSuccessMessage('Your message has been sent successfully!')
-            reset()
-            setTimeout(() => {
-              setSuccessMessage(null)
-            }, 3000)
+            reset() // Reset the form after submission
           },
           (error) => {
             console.log('FAILED...', error.text)
@@ -47,6 +44,10 @@ const ContactForm: React.FC = () => {
     }
   }
 
+  const handleCloseMessage = () => {
+    setSuccessMessage(null) // Clear the success message when close button is clicked
+  }
+
   return (
     <div className="contact-form-container mx-auto mt-10 max-w-lg  rounded-lg p-8 shadow-md lg:max-w-2xl">
       <h2 className="mb-8 text-center text-3xl font-bold text-gray-800">
@@ -54,8 +55,14 @@ const ContactForm: React.FC = () => {
       </h2>
 
       {successMessage && (
-        <div className="mb-4 text-center font-semibold text-green-600">
-          {successMessage}
+        <div className="mb-4 flex items-center justify-between rounded-lg bg-green-100 p-3 font-semibold text-green-600">
+          <span>{successMessage}</span>
+          <button
+            onClick={handleCloseMessage}
+            className="text-red-500 hover:text-red-700 focus:outline-none"
+          >
+            &times;
+          </button>
         </div>
       )}
 

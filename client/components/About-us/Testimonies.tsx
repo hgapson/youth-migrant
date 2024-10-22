@@ -4,28 +4,27 @@ import { FaQuoteLeft, FaArrowLeft, FaArrowRight, FaStar } from 'react-icons/fa'
 
 const MoreTestimoniesSection: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0)
-  const [animationClass, setAnimationClass] = useState('fade-in') // Add state for animation
+  const [animationClass, setAnimationClass] = useState('fade-in')
   const testimoniesPerSlide = 2
   const totalSlides = Math.ceil(testimonies.length / testimoniesPerSlide)
 
   const prevTestimony = () => {
     setAnimationClass('fade-out')
-    setTimeout(() => {
-      setCurrentIndex((prevIndex) =>
-        prevIndex === 0 ? totalSlides - 1 : prevIndex - 1,
-      )
-    }, 300) // Matches the duration of the fade-out animation
+    // Directly update the state for the previous slide
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? totalSlides - 1 : prevIndex - 1,
+    )
   }
 
   const nextTestimony = () => {
     setAnimationClass('fade-in')
-    setTimeout(() => {
-      setCurrentIndex((prevIndex) =>
-        prevIndex === totalSlides - 1 ? 0 : prevIndex + 1,
-      )
-    }, 300) // Matches the duration of the fade-out animation
+    // Directly update the state for the next slide
+    setCurrentIndex((prevIndex) =>
+      prevIndex === totalSlides - 1 ? 0 : prevIndex + 1,
+    )
   }
 
+  // On each slide change, reset the animation class to 'fade-in'
   useEffect(() => {
     setAnimationClass('fade-in')
   }, [currentIndex])
