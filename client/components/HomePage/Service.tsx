@@ -3,13 +3,13 @@ import training from '../public/training.jpg'
 import cv from '../public/cv.jpg'
 import { Link } from 'react-router-dom'
 
-const JobSolutionsSection: React.FC = () => {
+const Services: React.FC = () => {
   return (
     <section className="relative bg-cyan-600 px-6 py-16 sm:px-12 lg:px-24">
       <div className="container mx-auto">
         {/* Section Title */}
         <h2 className="mb-8 text-center text-4xl font-extrabold text-gray-100">
-          Job Solutions
+          Our Services
         </h2>
         {/* Decorative Divider */}
         <div className="mx-auto mb-8 h-1 w-24 rounded-full bg-indigo-800"></div>
@@ -79,7 +79,7 @@ const JobSolutionsSection: React.FC = () => {
             to="/job-solution"
             className="rounded-full bg-white px-8 py-3 text-lg font-semibold text-blue-600 shadow-lg transition-colors duration-300 hover:bg-gray-300"
           >
-            Explore More Solutions
+            Explore More Services
           </Link>
         </div>
       </div>
@@ -90,4 +90,4 @@ const JobSolutionsSection: React.FC = () => {
   )
 }
 
-export default JobSolutionsSection
+export default Services

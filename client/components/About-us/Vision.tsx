@@ -32,11 +32,9 @@ const MissionVisionSection: React.FC = () => {
             <div className="text-center">
               <h3 className="mb-3 text-2xl font-semibold">Mission</h3>
               <p className="text-base leading-relaxed">
-                Our mission is to empower migrants by providing comprehensive
-                support and resources to help them integrate and thrive in their
-                new communities. Through education, mentorship, and
-                opportunities, we ensure their successful transition into
-                society.
+                Our mission is to empower young refugees and migrants – it’s
+                clients - by providing them with opportunities for skill
+                development, training, and ultimately, meaningful employment.
               </p>
             </div>
           </div>
@@ -51,10 +49,9 @@ const MissionVisionSection: React.FC = () => {
             <div className="text-center">
               <h3 className="mb-3 text-2xl font-semibold">Vision</h3>
               <p className="text-base leading-relaxed">
-                We envision a world where every migrant has the opportunity to
-                achieve their potential and contribute meaningfully to their new
-                society. We strive to create inclusive environments where
-                cultural diversity is celebrated.
+                The organization seeks to bridge the gap between employers
+                looking for talent and young refugees and migrants seeking to
+                establish themselves in their new communities.
               </p>
             </div>
           </div>

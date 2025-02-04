@@ -2,15 +2,12 @@ import Background from './Background' // Adjust the path as per your project str
 import Event from './Events'
 import FancySection from './Impact'
 import Reason from './Reason'
-import JobSolution from './JobSolution'
+import Services from './Service'
 import JobListing from './JobsListing'
-import '../main.scss'
-// import GetInvolved from './GetInvolved'
-// import ImageCardSection from './Partners'
 import TestimonialsSection from './Testimonial'
 import ContactUsSection from './ContactUs'
 import RecruiterSection from './RecruiterSection'
-//import News from './News'
+import '../main.scss'
 
 const Home = () => {
   return (
@@ -29,7 +26,7 @@ const Home = () => {
         <Reason />
       </div>
       <div className="jobSolution">
-        <JobSolution />
+        <Services />
       </div>
       <div className="jobListing">
         <JobListing />

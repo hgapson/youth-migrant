@@ -8,7 +8,7 @@ const JobSolutionsPage: React.FC = () => {
     <section className="mt-10 bg-cyan-600 px-6 py-16">
       {/* Job Solutions Overview */}
       <h2 className="mb-8 text-center text-4xl font-extrabold">
-        Why Choose Our Solutions
+        Our Solutions
       </h2>
       <div className="grid gap-8 lg:grid-cols-3">
         {jobSolutions.whyChoose.map((item, index) => (
@@ -26,7 +26,7 @@ const JobSolutionsPage: React.FC = () => {
 
       {/* Job Solutions List */}
       <h2 className="my-12 text-center text-4xl font-extrabold">
-        Our Solutions
+        Our Services
       </h2>
       <div className="grid gap-10 sm:grid-cols-1 lg:grid-cols-2">
         {jobSolutions.solutions.map((solution, index) => (

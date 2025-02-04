@@ -2,7 +2,8 @@ import React, { useState } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import { FaMapMarkerAlt, FaBriefcase, FaClock } from 'react-icons/fa'
 import { Job, jobList } from './Models'
-// import ApplicationModal from './ApplicationModal'
+import Lottie from 'lottie-react'
+import noJobsAnimation from './animation.json' // Add a suitable Lottie animation
 
 const JobDetail: React.FC = () => {
   const { id } = useParams<{ id: string }>()
@@ -10,8 +11,26 @@ const JobDetail: React.FC = () => {
   const [isModalOpen, setIsModalOpen] = useState(false)
   const navigate = useNavigate()
 
+  // If no job is found, show the "No Jobs Available" message
   if (!job) {
-    return <p>Job not found</p>
+    return (
+      <div className="mt-12 flex min-h-screen flex-col items-center justify-center text-center">
+        <Lottie animationData={noJobsAnimation} className="h-48 w-48" />
+        <h3 className="mt-6 animate-pulse text-2xl font-bold text-white">
+          No Job Found
+        </h3>
+        <p className="mt-2 text-lg text-gray-200">
+          We currently do not have this job listed. But you can still reach out
+          to discuss potential opportunities.
+        </p>
+        <a
+          href="/contact"
+          className="mt-6 inline-block rounded-full bg-indigo-600 px-8 py-3 text-white transition duration-300 hover:bg-indigo-700"
+        >
+          Contact Us
+        </a>
+      </div>
+    )
   }
 
   // Check if the job is expired
@@ -23,7 +42,7 @@ const JobDetail: React.FC = () => {
         <div className="rounded-lg bg-white p-6 text-left shadow-lg">
           <h1 className="mb-2 text-4xl font-bold">{job.title}</h1>
           <h2 className="mb-4 text-2xl text-gray-700">{job.company}</h2>
-          <div className="mb-4  items-center justify-between text-gray-600">
+          <div className="mb-4 items-center justify-between text-gray-600">
             <div className="flex items-center py-2">
               <FaMapMarkerAlt className="mr-2" />
               <span>{job.location}</span>
@@ -68,7 +87,7 @@ const JobDetail: React.FC = () => {
               Back to All Vacancies
             </button>
           </div>
-          <div className="mt-8 rounded-lg  p-6 text-left shadow-lg">
+          <div className="mt-8 rounded-lg p-6 text-left shadow-lg">
             <h3 className="mb-4 text-xl font-bold">About Us</h3>
             <p className="mb-4 text-gray-700">{job.aboutUs}</p>
 

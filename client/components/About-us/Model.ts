@@ -1,7 +1,7 @@
 // src/models.ts
 
 import { FaFlag, FaHandshake, FaBuilding } from 'react-icons/fa'
-import wrf from '../public/WRF logo.jpg'
+import wrf from '../public/image.jpg'
 import migration from '../public/migration.png'
 import winz from '../public/winz.jpg'
 import team1 from '../public/team1.jpg'

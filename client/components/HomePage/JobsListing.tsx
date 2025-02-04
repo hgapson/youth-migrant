@@ -1,16 +1,19 @@
 import React from 'react'
 import { jobList } from '../JobsList/Models'
-// import { Link } from 'react-router-dom'
+import Lottie from 'lottie-react'
+import noJobsAnimation from '../JobsList/animation.json' // Ensure this JSON file is present
 
 const JobBoardSection: React.FC = () => {
-  // Function to sort jobs by date and get the latest three
-  const sortedJobs = jobList.sort(
-    (a, b) =>
-      new Date(b.datePosted).getTime() - new Date(a.datePosted).getTime(),
-  )
+  const currentDate = new Date()
 
-  // Get the three most recent jobs
-  const latestJobs = sortedJobs.slice(0, 3)
+  // Filter and sort jobs
+  const latestJobs = jobList
+    .filter((job) => new Date(job.expirationDate) > currentDate) // Filter out expired jobs
+    .sort(
+      (a, b) =>
+        new Date(b.datePosted).getTime() - new Date(a.datePosted).getTime(),
+    )
+    .slice(0, 3)
 
   return (
     <section className="relative bg-cyan-600 px-6 py-16 sm:px-12 lg:px-24">
@@ -27,48 +30,66 @@ const JobBoardSection: React.FC = () => {
               to advance your career.
             </p>
             <a
-              href="/vacancies"
-              className="inline-block rounded-full bg-blue-600 px-8 py-3 text-white transition duration-300 hover:bg-blue-700"
+              href={latestJobs.length > 0 ? '/vacancies' : '#'}
+              className={`inline-block rounded-full px-8 py-3 transition duration-300 ${
+                latestJobs.length > 0
+                  ? 'bg-blue-600 text-white hover:bg-blue-700'
+                  : 'cursor-not-allowed bg-gray-400 text-gray-700'
+              }`}
             >
               View More Jobs
             </a>
           </div>
 
-          {/* Second Div: Job Listings */}
-          <div className="flex flex-col lg:w-2/3 lg:flex-row lg:space-x-8">
-            {latestJobs.map((Job) => (
-              <div
-                key={Job.id}
-                className="mb-8 flex flex-col items-center rounded-lg bg-white p-6 shadow-lg transition-shadow duration-300 hover:shadow-xl lg:mb-0 lg:w-1/3"
-              >
-                <div className="mb-4 flex flex-col items-center">
-                  <div className="text-center">
-                    <h3 className="text-md font-semibold text-indigo-600">
-                      {Job.title}
-                    </h3>
-                    <p className="text-sm text-gray-500">
-                      Posted: {Job.datePosted}
-                    </p>
-                  </div>
-                </div>
-                <p className="text-gray-700">{Job.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
+          {/* Second Div: Job Listings or No Jobs Message */}
+          <div className="flex flex-col items-center justify-center lg:w-2/3">
+            {latestJobs.length > 0 ? (
+              <div className="flex w-full flex-col lg:flex-row lg:space-x-8">
+                {latestJobs.map((job) => {
+                  const expirationDate = new Date(job.expirationDate)
+                  const isExpired = expirationDate < currentDate
 
-        {/* Third Div: Contact Us */}
-        <div className="mt-12 text-center">
-          <p className="mb-4 text-lg text-gray-100">
-            Interested in any of these jobs? Contact us today to find out how we
-            can help you secure your next opportunity.
-          </p>
-          <a
-            href="/contact"
-            className="inline-block rounded-full bg-indigo-600 px-8 py-3 text-white transition duration-300 hover:bg-indigo-700"
-          >
-            Contact Us
-          </a>
+                  return (
+                    <div
+                      key={job.id}
+                      className="mb-8 flex flex-col items-center rounded-lg bg-white p-6 shadow-lg transition-shadow duration-300 hover:shadow-xl lg:mb-0 lg:w-1/3"
+                    >
+                      <div className="mb-4 flex flex-col items-center">
+                        <div className="text-center">
+                          <h3 className="text-md font-semibold text-indigo-600">
+                            {job.title}
+                          </h3>
+                          <p className="text-sm text-gray-500">
+                            Posted:{' '}
+                            {new Date(job.datePosted).toLocaleDateString()}
+                          </p>
+                          <p
+                            className={`text-sm ${isExpired ? 'text-red-500' : 'text-green-500'}`}
+                          >
+                            {isExpired
+                              ? 'Expired'
+                              : `Expires: ${expirationDate.toLocaleDateString()}`}
+                          </p>
+                        </div>
+                      </div>
+                      <p className="text-gray-700">{job.description}</p>
+                    </div>
+                  )
+                })}
+              </div>
+            ) : (
+              <div className="flex w-full flex-col items-center justify-center py-12">
+                <Lottie animationData={noJobsAnimation} className="h-48 w-48" />
+                <h3 className="mt-6 animate-pulse text-2xl font-bold text-white">
+                  No Jobs Available Right Now
+                </h3>
+                <p className="mt-2 text-center text-lg text-gray-200">
+                  Check back later or contact us to get updates on avalable
+                  openings opportunities.
+                </p>
+              </div>
+            )}
+          </div>
         </div>
       </div>
 

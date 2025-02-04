@@ -33,15 +33,21 @@ const Vacancies: React.FC = () => {
         <h1 className="mb-8 text-center text-4xl font-bold text-white">
           All Vacancies
         </h1>
+
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {currentJobs.map((job: Job) => {
-            const isExpired = new Date() > new Date(job.expirationDate)
+            const expirationDate = job.expirationDate
+              ? new Date(job.expirationDate)
+              : null
+            const isExpired = expirationDate
+              ? new Date() > expirationDate
+              : false
 
             return (
               <div
                 key={job.id}
                 className={`rounded-lg bg-white p-6 shadow-lg ${
-                  isExpired ? 'border-2 ' : ''
+                  isExpired ? 'border-2 border-red-500' : ''
                 }`}
               >
                 <h2 className="mb-2 text-2xl font-bold">{job.title}</h2>
@@ -62,18 +68,41 @@ const Vacancies: React.FC = () => {
                     </span>
                   </div>
                 </div>
-                {!isExpired && (
-                  <p className="mb-4 text-sm text-gray-500">
-                    Posted on: {new Date(job.datePosted).toLocaleDateString()}
-                  </p>
-                )}
-                {isExpired && (
-                  <p className="mb-4 text-red-500">This job has expired.</p>
-                )}
+
+                {/* Posted Date */}
+                <p className="mb-2 text-sm text-gray-500">
+                  Posted on: {new Date(job.datePosted).toLocaleDateString()}
+                </p>
+
+                {/* Expiration Date (Green if active, Red if expired, Empty if unknown) */}
+                <p
+                  className={`text-sm ${isExpired ? 'text-red-500' : 'text-green-500'}`}
+                >
+                  {expirationDate
+                    ? isExpired
+                      ? 'Expired'
+                      : `Expires: ${expirationDate.toLocaleDateString()}`
+                    : 'Expiration Date: Unknown'}
+                </p>
               </div>
             )
           })}
         </div>
+
+        {/* Contact Us Section Below Jobs */}
+        <div className="mt-10 text-center">
+          <p className="mb-4 text-lg text-white">
+            Interested in one of these jobs? Contact us today to learn more.
+          </p>
+          <a
+            href="/contact"
+            className="inline-block rounded-full bg-indigo-600 px-8 py-3 text-white transition duration-300 hover:bg-indigo-700"
+          >
+            Contact Us
+          </a>
+        </div>
+
+        {/* Pagination Controls */}
         <div className="mt-8 flex flex-col items-center">
           <div className="mb-4 flex items-center">
             <button
