@@ -18,32 +18,15 @@ const Footer = () => {
         <div className="flex flex-col justify-between gap-8 md:flex-row">
           {/* About Section */}
           <div className="flex-1">
-            <h2 className="mb-4 text-lg font-bold uppercase">Youth Migrant</h2>
+            <h2 className="mb-4 text-lg font-bold uppercase">Job Link</h2>
             <p className="text-sm text-gray-400">
-              Youth Migrant partners with refugees to access life-changing
-              solutions and transform how the world supports them.
+              Job Link partners with migrants and former refugees to access
+              life-changing solutions and transform how the world supports them.
             </p>
           </div>
 
           {/* Footer Links */}
           <div className="flex flex-1 flex-col gap-8 md:flex-row">
-            {/* Our Work Links */}
-            <div>
-              <h3 className="mb-2 text-lg font-semibold">Our Work</h3>
-              <ul className="space-y-2 text-sm text-gray-400">
-                <li>
-                  <Link to="/events" className="hover:text-white">
-                    Events
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/vacancies" className="hover:text-white">
-                    Opportunities
-                  </Link>
-                </li>
-              </ul>
-            </div>
-
             {/* About Us Links */}
             <div>
               <h3 className="mb-2 text-lg font-semibold">About Us</h3>
@@ -66,11 +49,6 @@ const Footer = () => {
               <h3 className="mb-2 text-lg font-semibold">Resources</h3>
               <ul className="space-y-2 text-sm text-gray-400">
                 <li>
-                  <Link to="/why-we-help" className="hover:text-white">
-                    Who we serve
-                  </Link>
-                </li>
-                <li>
                   <Link to="/about-us" className="hover:text-white">
                     Partners
                   </Link>
@@ -90,7 +68,7 @@ const Footer = () => {
 
         {/* Footer Bottom */}
         <div className="mt-8 border-t border-gray-700 pt-4 text-center text-sm text-gray-500">
-          © {new Date().getFullYear()} Youth Migrant. All rights reserved.
+          © {new Date().getFullYear()} Job Link. All rights reserved.
         </div>
       </div>
     </footer>

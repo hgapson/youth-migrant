@@ -1,5 +1,5 @@
-import training from '../public/training-image.jpg'
-import cv from '../public/writting cv.jpg'
+import training from '../public/training-image.jpeg'
+import cv from '../public/writing cv.jpg'
 import mentorship from '../public/mentorship.jpg'
 import support from '../public/supporting.jpg'
 

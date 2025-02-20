@@ -17,11 +17,7 @@ const FancySection: React.FC = () => {
               alt="Fancy Feature"
               className="h-80 w-full object-cover"
             />
-            <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-30 opacity-0 transition-opacity duration-500 hover:opacity-100">
-              <span className="text-xl font-bold text-white">
-                Click the button for more information
-              </span>
-            </div>
+            <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-30 opacity-0 transition-opacity duration-500 hover:opacity-100"></div>
           </div>
 
           {/* Text Div */}

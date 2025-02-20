@@ -63,24 +63,54 @@ const EmploymentSupport = () => {
         </div>
 
         {/* New Context: Career Success Path */}
-        <div className="relative mt-12 flex flex-col items-center lg:flex-row lg:gap-12">
-          <div className="relative h-64 w-full max-w-lg overflow-hidden rounded-lg shadow-lg lg:w-1/2">
-            <img
-              src={jobSupportImage}
-              alt="Employment Support"
-              className="h-full w-full object-cover"
-            />
-            <div className="absolute inset-0 bg-black/40"></div>
-          </div>
-          <div className="relative mt-6 max-w-lg rounded-lg bg-white/20 p-6 text-white shadow-lg lg:mt-0">
-            <h3 className="mb-3 text-2xl font-bold">Career Success Path</h3>
-            <ul className="list-disc space-y-2 pl-5 text-sm">
-              <li>👨‍🏫 **Step 1:** Career Guidance & Skill Assessment</li>
-              <li>📑 **Step 2:** Resume Writing & Job Application Support</li>
-              <li>🎤 **Step 3:** Interview Preparation & Mock Interviews</li>
-              <li>💼 **Step 4:** Job Placement & Workplace Integration</li>
-              <li>🌟 **Step 5:** Ongoing Career Growth & Upskilling</li>
-            </ul>
+        <div className="relative mt-12 w-full max-w-3xl rounded-xl bg-white/10 p-8 text-white shadow-lg">
+          <h3 className="mb-5 text-center text-3xl font-bold text-white">
+            Career Success Path
+          </h3>
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+            <div className="flex items-start gap-3 rounded-lg bg-white/20 p-4 shadow-md">
+              <span className="text-xl">👨‍🏫</span>
+              <div>
+                <h4 className="text-lg font-semibold">Step 1</h4>
+                <p className="text-sm">Career Guidance & Skill Assessment</p>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-3 rounded-lg bg-white/20 p-4 shadow-md">
+              <span className="text-xl">📑</span>
+              <div>
+                <h4 className="text-lg font-semibold">Step 2</h4>
+                <p className="text-sm">
+                  Resume Writing & Job Application Support
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-3 rounded-lg bg-white/20 p-4 shadow-md">
+              <span className="text-xl">🎤</span>
+              <div>
+                <h4 className="text-lg font-semibold">Step 3</h4>
+                <p className="text-sm">
+                  Interview Preparation & Mock Interviews
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-3 rounded-lg bg-white/20 p-4 shadow-md">
+              <span className="text-xl">💼</span>
+              <div>
+                <h4 className="text-lg font-semibold">Step 4</h4>
+                <p className="text-sm">Job Placement & Workplace Integration</p>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-3 rounded-lg bg-white/20 p-4 shadow-md sm:col-span-2">
+              <span className="text-xl">🌟</span>
+              <div>
+                <h4 className="text-lg font-semibold">Step 5</h4>
+                <p className="text-sm">Ongoing Career Growth & Upskilling</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
