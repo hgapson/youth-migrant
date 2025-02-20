@@ -24,14 +24,14 @@ const ContactSection: React.FC = () => {
             className="flex items-center space-x-4 hover:text-green-600"
           >
             <FaPhone size={24} className="text-green-500" />
-            <p className="text-lg">072100091</p>
+            <p className="text-lg">+64211505520</p>
           </a>
           <a
             href="mailto:info@example.com"
             className="flex items-center space-x-4 hover:text-red-600"
           >
             <FaEnvelope size={24} className="text-red-500" />
-            <p className="text-lg">youthmigrantwork@outlook.com</p>
+            <p className="text-lg">joblink.upskilling@outlook.com</p>
           </a>
         </div>
       </div>
