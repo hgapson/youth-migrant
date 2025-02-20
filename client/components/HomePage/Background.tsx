@@ -25,15 +25,15 @@ const Background: React.FC = () => {
         }}
       >
         {/* Content */}
-        <div className="w-full">
+        <div className="flex h-full items-center justify-center">
           {showPopup && (
             <button
-              className="popup-message"
+              className="flex animate-bounce items-center gap-2 rounded-lg bg-yellow-500 px-6 py-3 text-lg font-semibold text-black shadow-lg transition-transform hover:scale-110 hover:bg-yellow-600"
               onClick={handlePopupClick}
               aria-label="Close notification"
             >
-              <AiOutlineWarning className="popup-icon" />
-              <span className="popup-text">Our Services are Free!</span>
+              <AiOutlineWarning className="text-2xl" />
+              <span>Our Services are Free!</span>
             </button>
           )}
         </div>

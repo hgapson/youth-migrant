@@ -1,58 +1,91 @@
-// src/components/Event.tsx
+import {
+  FaChalkboardTeacher,
+  FaBriefcase,
+  FaUsers,
+  FaHandshake,
+} from 'react-icons/fa'
+import jobSupportImage from '../public/impact.jpg' // Replace with an actual image
 
-import { Link } from 'react-router-dom'
-import { eventsData } from '../models'
-import '../About-us/about.scss'
-
-const Event = () => {
-  const sortedEvents = eventsData.sort(
-    (a, b) =>
-      new Date(b.datePosted).getTime() - new Date(a.datePosted).getTime(),
-  )
-
-  const latestEvent = sortedEvents.slice(0, 1)
+const EmploymentSupport = () => {
+  const initiatives = [
+    {
+      id: 1,
+      icon: <FaBriefcase />,
+      title: 'Job Placement Assistance',
+      description:
+        'Connecting skilled migrants and refugees with meaningful employment opportunities.',
+    },
+    {
+      id: 2,
+      icon: <FaChalkboardTeacher />,
+      title: 'Workshops & Training',
+      description:
+        'Providing career coaching, resume building, and interview preparation.',
+    },
+    {
+      id: 3,
+      icon: <FaUsers />,
+      title: 'Professional Networking',
+      description:
+        'Creating industry connections through mentorship and networking events.',
+    },
+    {
+      id: 4,
+      icon: <FaHandshake />,
+      title: 'Employer Partnerships',
+      description:
+        'Partnering with businesses to promote inclusive hiring and workplace diversity.',
+    },
+  ]
 
   return (
-    <section className="relative  bg-sky-300 px-4 py-12 md:px-8 lg:px-16">
-      <div className="relative z-10 mx-auto max-w-7xl text-center">
-        <h2 className="mb-8 text-4xl font-bold text-black">OUR PROGRAMS</h2>
-        <div>
-          {latestEvent.map((event) => (
-            <div key={event.id} className="p-4">
-              <div className="relative flex flex-col items-center overflow-hidden rounded-lg  shadow-lg transition-transform hover:scale-105">
-                <h3 className="mb-6 text-2xl font-semibold">
-                  {event.subtitle}
-                </h3>
-                <div className="relative h-64 w-full">
-                  <img
-                    src={event.image}
-                    alt={event.subtitle}
-                    className="h-full w-full object-cover"
-                  />
+    <section className="relative bg-gradient-to-b from-green-300 to-cyan-500 px-6 py-16 text-white md:px-12 lg:px-20">
+      {/* Background overlay */}
+      <div className="absolute inset-0 bg-black/50"></div>
 
-                  <div className="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-25 p-4 text-white">
-                    <p className="mb-2 text-xl font-semibold">
-                      {event.description}
-                    </p>
-                  </div>
-                </div>
-              </div>
+      <div className="relative z-10 mx-auto max-w-7xl text-center">
+        <h2 className="mb-10 text-4xl font-bold tracking-wide">
+          EMPLOYMENT & ECONOMIC EMPOWERMENT
+        </h2>
+
+        {/* Employment Support Initiatives */}
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
+          {initiatives.map((item) => (
+            <div
+              key={item.id}
+              className="flex flex-col items-center justify-center rounded-xl bg-white/20 p-6 shadow-md transition-transform hover:scale-105"
+            >
+              <div className="text-4xl">{item.icon}</div>
+              <h3 className="mt-3 text-xl font-semibold">{item.title}</h3>
+              <p className="mt-2 text-center text-sm">{item.description}</p>
             </div>
           ))}
         </div>
 
-        {/* Single Button for all events */}
-        <div className="mt-8 flex justify-center">
-          <Link
-            to="/Events"
-            className="rounded-lg bg-blue-500 p-3 text-white shadow-lg hover:bg-blue-600"
-          >
-            View All Programs
-          </Link>
+        {/* New Context: Career Success Path */}
+        <div className="relative mt-12 flex flex-col items-center lg:flex-row lg:gap-12">
+          <div className="relative h-64 w-full max-w-lg overflow-hidden rounded-lg shadow-lg lg:w-1/2">
+            <img
+              src={jobSupportImage}
+              alt="Employment Support"
+              className="h-full w-full object-cover"
+            />
+            <div className="absolute inset-0 bg-black/40"></div>
+          </div>
+          <div className="relative mt-6 max-w-lg rounded-lg bg-white/20 p-6 text-white shadow-lg lg:mt-0">
+            <h3 className="mb-3 text-2xl font-bold">Career Success Path</h3>
+            <ul className="list-disc space-y-2 pl-5 text-sm">
+              <li>👨‍🏫 **Step 1:** Career Guidance & Skill Assessment</li>
+              <li>📑 **Step 2:** Resume Writing & Job Application Support</li>
+              <li>🎤 **Step 3:** Interview Preparation & Mock Interviews</li>
+              <li>💼 **Step 4:** Job Placement & Workplace Integration</li>
+              <li>🌟 **Step 5:** Ongoing Career Growth & Upskilling</li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
   )
 }
 
-export default Event
+export default EmploymentSupport

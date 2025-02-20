@@ -3,7 +3,7 @@ import impact from '../public/impact.jpg'
 
 const FancySection: React.FC = () => {
   return (
-    <section className="bg-cyan-600 py-16">
+    <section className="bg-gradient-to-b from-green-400 to-cyan-800 py-16">
       <div className="container mx-auto px-6 lg:px-8">
         <h2 className="mb-8 text-center text-4xl font-extrabold text-white drop-shadow-lg">
           Our Impact
