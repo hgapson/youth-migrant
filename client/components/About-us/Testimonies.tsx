@@ -60,13 +60,6 @@ const MoreTestimoniesSection: React.FC = () => {
                   <h3 className="mb-2 text-xl font-semibold text-gray-800">
                     {testimony.name}
                   </h3>
-                  <div className="mb-4 flex justify-center">
-                    {Array(testimony.rating)
-                      .fill(0)
-                      .map((_, i) => (
-                        <FaStar key={i} className="text-yellow-500" />
-                      ))}
-                  </div>
                   <p className="text-gray-700">“{testimony.testimony}”</p>
                 </div>
               ))}
