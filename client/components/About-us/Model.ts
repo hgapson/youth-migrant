@@ -88,10 +88,11 @@ export const milestones = [
 export const testimonies = [
   {
     name: 'John Doe',
-    testimony:
-      'The support I received from this organization was phenomenal. They helped me every step of the way.',
-    image: 'https://randomuser.me/api/portraits/men/32.jpg',
-    rating: 5,
+    testimony: `I came to New Zealand after learning English and working seasonal jobs, said Client 1, a refugee from Somalia who grew up in Ethiopia.
+When I met Mohamed at the mosque and mentioned I was looking for work, he immediately offered to help me, he recalls.
+The very next day, I went to the MYWTSL office where the staff assisted me with my CV and enrolled me in truck driving training, and they even paid for my forklift training, he explained.
+I managed to secure a job in Te Puke, but an urgent family matter forced me to leave, so now I am actively knocking on doors to find new opportunities, he added.
+Mohamed encouraged me to never give up, and despite being currently unemployed, I remain optimistic thanks to the continuous support from MYWTSL, including help with job applications and mentoring, he stated.`,
   },
   {
     name: 'Jane Smith',

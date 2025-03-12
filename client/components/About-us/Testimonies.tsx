@@ -52,11 +52,6 @@ const MoreTestimoniesSection: React.FC = () => {
                   key={index}
                   className="flex-1 rounded-lg bg-white bg-opacity-80 p-6 shadow-lg backdrop-blur-lg"
                 >
-                  <img
-                    src={testimony.image}
-                    alt={testimony.name}
-                    className="mb-4 h-24 w-24 rounded-full border-4 border-blue-600 object-cover"
-                  />
                   <h3 className="mb-2 text-xl font-semibold text-gray-800">
                     {testimony.name}
                   </h3>
