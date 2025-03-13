@@ -5,7 +5,7 @@ import { FaQuoteLeft, FaArrowLeft, FaArrowRight, FaStar } from 'react-icons/fa'
 const MoreTestimoniesSection: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0)
   const [animationClass, setAnimationClass] = useState('fade-in')
-  const testimoniesPerSlide = 2
+  const testimoniesPerSlide = 1
   const totalSlides = Math.ceil(testimonies.length / testimoniesPerSlide)
 
   const prevTestimony = () => {

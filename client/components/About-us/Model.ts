@@ -62,17 +62,17 @@ export interface Milestone {
 
 export const milestones = [
   {
-    year: '2010',
+    year: '2004',
     title: 'Foundation',
     description:
-      'Our organization was founded with a mission to support migrants.',
+      'Our organization was founded with a mission to support former refugees and migrants to get jobs.',
     icon: FaFlag,
   },
   {
     year: '2015',
     title: 'Expansion',
     description:
-      'We expanded our services to multiple cities and started new programs.',
+      'We expanded our services from two clients to multiple clients and started new programs.',
     icon: FaHandshake,
   },
   {
@@ -82,38 +82,63 @@ export const milestones = [
       'Received recognition and awards for our impactful work in the community.',
     icon: FaBuilding,
   },
+  {
+    year: 'Present',
+    title: 'Partnership',
+    description:
+      'Now we are looking new partners to strength the organization to make impact on many communities.',
+    icon: FaBuilding,
+  },
 ]
 
 // Testimonies
 export const testimonies = [
   {
     name: 'John Doe',
-    testimony: `I came to New Zealand after learning English and working seasonal jobs, said Client 1, a refugee from Somalia who grew up in Ethiopia.
-When I met Mohamed at the mosque and mentioned I was looking for work, he immediately offered to help me, he recalls.
-The very next day, I went to the MYWTSL office where the staff assisted me with my CV and enrolled me in truck driving training, and they even paid for my forklift training, he explained.
-I managed to secure a job in Te Puke, but an urgent family matter forced me to leave, so now I am actively knocking on doors to find new opportunities, he added.
-Mohamed encouraged me to never give up, and despite being currently unemployed, I remain optimistic thanks to the continuous support from MYWTSL, including help with job applications and mentoring, he stated.`,
+    testimony: `I came to New Zealand after learning English and working seasonal jobs,
+when I met Mohamed at the mosque and mentioned I was looking for work, he immediately offered to help me, he recalls.
+The very next day, I went to the Job Link office where the staff assisted me with my CV and enrolled me in truck driving training, and they even paid for my forklift training, he explained.
+I managed to secure a job in Te Puke, but an urgent family matter forced me to leave.
+Mohamed encouraged me to never give up, and despite being currently unemployed, I remain optimistic thanks to the continuous support from Job Link, including help with job applications and mentoring.`,
   },
   {
     name: 'Jane Smith',
     testimony:
-      'Thanks to their guidance and resources, I was able to find a job that perfectly matches my skills.',
+      `I lost my husband while I was on my way to New Zealand, and in Hamilton I felt completely alone.
+I never learned to read or write in English, and with my children depending on me, I couldn’t work and was left isolated.
+When I heard about Mohamed from someone in the community, I visited his office and he began supporting me with food, rides to the mosque and supermarket, clothes, and moral support.
+Now, thanks to his ongoing help, I feel confident enough to learn how to drive and improve my English so I can eventually work to support my family.`,
     image: 'https://randomuser.me/api/portraits/women/44.jpg',
     rating: 4,
   },
   {
     name: 'Michael Johnson',
     testimony:
-      'This organization gave me the confidence and tools I needed to succeed in a new country.',
-    image: 'https://randomuser.me/api/portraits/men/58.jpg',
-    rating: 5,
+      `I arrived in New Zealand in February 2023 and am actively seeking part-time work opportunities, my spoken English is excellent because I learned the language before moving here,
+Job Link offered me a volunteer role in translation and interpretation, which has helped me build valuable customer service, listening, and relationship-building skills.
+They matched my international qualifications to NZQA standards to prepare my CV, and I can always count on immediate help from their employment support person.`,
   },
   {
     name: 'Emma Wilson',
     testimony:
-      'Their team is dedicated, and I felt truly supported during my journey. I’m forever grateful!',
-    image: 'https://randomuser.me/api/portraits/women/60.jpg',
-    rating: 4,
+      `Job Link has helped me look for part-time work by advising me on options that fit my schedule as both a student and a primary language assistant for my family.
+They've also evaluated my soft skills and offered guidance on my future career interests.
+I regularly visit Job Link to discuss my career aspirations and make decisions that will set me on the right path and 
+I'm extremely grateful for the support from Job Link’s employment support person, who is always easy to talk to and provides valuable advice.`,
+  },
+  {
+    name: 'Emma Wilson',
+    testimony:
+      `I'm an elderly lady and a mother of four almost-grown children, thanks to Job Link, my eldest son and daughter have both found work.
+Mohamed has been a tremendous help, serving as a role model for my boys and assisting with groceries and driving,
+he has also helped us settle in Hamilton and organizes family trips for our community, which means a lot to us.
+Without this support, our resettlement experience would have been much more difficult, but now we've found happiness and stability.`,
+  },
+  {
+    name: 'Emma Wilson',
+    testimony:
+      `Job Link helped me secure a machine operator job, just like I had back home, my English was very basic, but I'm grateful they found me a job where language wasn’t a barrier. I'm happy at work and feel lucky, knowing many young men are still searching for jobs.
+My dream was to finishing my Computing Science degree and contributing to New Zealand’s economy.`,
   },
 ]
 
