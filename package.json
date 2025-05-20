@@ -4,7 +4,9 @@
   "version": "2.0.0",
   "main": "server/index.js",
   "license": "MIT",
-  "keywords": ["fullstack"],
+  "keywords": [
+    "fullstack"
+  ],
   "scripts": {
     "test": "vitest",
     "start": "node dist/server.js",
@@ -21,7 +23,9 @@
   },
   "eslintConfig": {
     "extends": "@devacademy/eslint-config/react",
-    "ignorePatterns": ["bundle.js"]
+    "ignorePatterns": [
+      "bundle.js"
+    ]
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
@@ -32,6 +36,7 @@
     "@react-spring/web": "^9.7.4",
     "@types/cors": "^2.8.17",
     "@types/nodemailer": "^6.4.15",
+    "@vercel/analytics": "^1.5.0",
     "aos": "^2.3.4",
     "axios": "^1.7.2",
     "body-parser": "^1.20.2",
@@ -103,7 +108,9 @@
   "prettier": {
     "semi": false,
     "singleQuote": true,
-    "plugins": ["prettier-plugin-tailwindcss"]
+    "plugins": [
+      "prettier-plugin-tailwindcss"
+    ]
   },
   "browserslist": "> 2%, not dead"
 }

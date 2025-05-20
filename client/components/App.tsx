@@ -1,9 +1,15 @@
-import React from 'react'
+//import React from 'react'
+import { Analytics } from '@vercel/analytics/react'
 import { RouterProvider } from 'react-router-dom'
 import router from './routes' // Ensure the path is correct
 
 const App = () => {
-  return <RouterProvider router={router} />
+  return (
+    <>
+      <Analytics />
+      <RouterProvider router={router} />
+    </>
+  )
 }
 
 export default App
