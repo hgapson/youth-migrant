@@ -31,7 +31,7 @@ const ContactSection: React.FC = () => {
             className="flex items-center space-x-4 hover:text-red-600"
           >
             <FaEnvelope size={24} className="text-red-500" />
-            <p className="text-lg">joblink.upskilling@outlook.com</p>
+            <p className="text-lg">joblink.upskilling@gmail.com</p>
           </a>
         </div>
       </div>
